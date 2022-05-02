@@ -1,0 +1,14 @@
+{
+  "name": "react-testing-library-cljs",
+  "scripts": {
+    "watch": "npx shadow-cljs watch app",
+    "release": "npx shadow-cljs release app"
+  },
+  "devDependencies": {
+    "nbb": "0.3.7",
+    "shadow-cljs": "2.18.0"
+  },
+  "dependencies": {
+    "@testing-library/react": "13.1.1"
+  }
+}
