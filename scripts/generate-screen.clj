@@ -2,10 +2,24 @@
 
 (require '[babashka.deps :as deps])
 
+(def screen-source-file "../src/main/react_testing_library_cljs/screen.cljs")
+
+(def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
+(def end-marker ";; End - Generated Code (Do not modify manually)\n")
+
 (def fn-template
 "(defn $cljs-fn-name [query]
   (.$js-fn-name screen query))
 ")
+
+(defn insert-string [original string position]
+  (str (subs original 0 position)
+       string
+       (subs original position)))
+
+(defn remove-string-between [string begin end]
+  (str (subs string 0 begin)
+       (subs string end)))
 
 (defn camel-case->kebab-case [string]
   (reduce
@@ -25,5 +39,11 @@
                      (map #(-> fn-template
                                (clojure.string/replace "$cljs-fn-name" (camel-case->kebab-case %))
                                (clojure.string/replace "$js-fn-name" %)))
-                     (clojure.string/join "\n"))]
-  (spit "../src/main/react_testing_library_cljs/screen.cljs" (str begin-template query-fns)))
+                     (clojure.string/join "\n"))
+      source-file (slurp screen-source-file)
+      begin-position (+ (clojure.string/index-of source-file begin-marker) (count begin-marker))
+      end-position (clojure.string/index-of source-file end-marker)
+      source-file-updated (-> source-file
+                              (remove-string-between begin-position end-position)
+                              (insert-string query-fns begin-position))]
+  (spit screen-source-file source-file-updated))
