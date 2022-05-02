@@ -7,10 +7,7 @@
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
 
-(def fn-template
-"(defn $cljs-fn-name [query]
-  (.$js-fn-name screen query))
-")
+(def query-fn-template (slurp "query-fn-template.clj"))
 
 (defn insert-string [original string position]
   (str (subs original 0 position)
@@ -36,7 +33,7 @@
                     query-value query-values]
                 (str query-type query-value))
       query-fns (->> queries
-                     (map #(-> fn-template
+                     (map #(-> query-fn-template
                                (clojure.string/replace "$cljs-fn-name" (camel-case->kebab-case %))
                                (clojure.string/replace "$js-fn-name" %)))
                      (clojure.string/join "\n"))
