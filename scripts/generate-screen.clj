@@ -2,14 +2,6 @@
 
 (require '[babashka.deps :as deps])
 
-(def begin-template
-"
-(ns react-testing-library-cljs.screen
-  (:require
-      [\"@testing-library/react\" :refer [screen]]))
-
-")
-
 (def fn-template
 "(defn $cljs-fn-name [query]
   (.$js-fn-name screen query))
@@ -23,8 +15,6 @@
         (str result char)))
     ""
     string))
-
-(defn create-query-function [])
 
 (let [query-types ["getBy" "queryBy" "findBy" "getAllBy" "queryAllBy" "findAllBy"]
       query-values ["Role" "LabelText" "PlaceholderText" "Text" "DisplayValue" "AltText" "Title" "TestId"]
