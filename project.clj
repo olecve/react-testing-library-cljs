@@ -1,4 +1,4 @@
-(defproject org.clojars.olecve/react-testing-library-cljs "0.0.1-SNAPSHOT"
+(defproject org.clojars.olecve/react-testing-library-cljs "0.0.1"
   :description "ClojureScript wrapper for react-testing-library"
   :url "https://the.inter.net/wherever"
 
