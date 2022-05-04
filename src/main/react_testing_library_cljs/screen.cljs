@@ -6,6 +6,7 @@
   ([] (.debug screen))
   ([elements] (.debug screen elements)))
 
+;; Refer to https://testing-library.com/docs/queries/about/ for more details about queries
 ;; Begin - Generated Code (Do not modify manually)
 (defn get-by-role [query]
   (.getByRole screen query))
