@@ -45,3 +45,4 @@ pom.xml
 .crossover-cljs
 .repl
 node_modules
+pom.xml.asc
