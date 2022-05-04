@@ -2,6 +2,10 @@
   (:require
     ["@testing-library/react" :refer [screen]]))
 
+(defn debug
+  ([] (.debug screen))
+  ([elements] (.debug screen elements)))
+
 ;; Begin - Generated Code (Do not modify manually)
 (defn get-by-role [query]
   (.getByRole screen query))
