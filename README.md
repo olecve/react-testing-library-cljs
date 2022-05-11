@@ -1,14 +1,8 @@
 # react-testing-library-cljs
 
-A ClojureScript library designed to ... well, that part is up to you.
+A ClojureScript wrapper for [react-testing-library](https://github.com/testing-library/react-testing-library).
 
-## Usage
+## LICENSE
 
-FIXME
+[MIT](LICENSE)
 
-## License
-
-Copyright © 2022 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
