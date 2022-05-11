@@ -5,7 +5,6 @@
     "release": "npx shadow-cljs release app"
   },
   "devDependencies": {
-    "nbb": "0.3.7",
     "shadow-cljs": "2.18.0"
   },
   "dependencies": {
