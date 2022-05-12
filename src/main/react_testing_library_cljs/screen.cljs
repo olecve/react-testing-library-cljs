@@ -9,290 +9,290 @@
 ;; Refer to https://testing-library.com/docs/queries/about/ for more details about queries
 ;; Begin - Generated Code (Do not modify manually)
 (defn get-by-role
-  ([query]
-   (.getByRole screen query))
-  ([query options]
-   (.getByRole screen query (clj->js options))))
+  ([matcher]
+   (.getByRole screen matcher))
+  ([matcher options]
+   (.getByRole screen matcher (clj->js options))))
 
 (defn get-by-label-text
-  ([query]
-   (.getByLabelText screen query))
-  ([query options]
-   (.getByLabelText screen query (clj->js options))))
+  ([matcher]
+   (.getByLabelText screen matcher))
+  ([matcher options]
+   (.getByLabelText screen matcher (clj->js options))))
 
 (defn get-by-placeholder-text
-  ([query]
-   (.getByPlaceholderText screen query))
-  ([query options]
-   (.getByPlaceholderText screen query (clj->js options))))
+  ([matcher]
+   (.getByPlaceholderText screen matcher))
+  ([matcher options]
+   (.getByPlaceholderText screen matcher (clj->js options))))
 
 (defn get-by-text
-  ([query]
-   (.getByText screen query))
-  ([query options]
-   (.getByText screen query (clj->js options))))
+  ([matcher]
+   (.getByText screen matcher))
+  ([matcher options]
+   (.getByText screen matcher (clj->js options))))
 
 (defn get-by-display-value
-  ([query]
-   (.getByDisplayValue screen query))
-  ([query options]
-   (.getByDisplayValue screen query (clj->js options))))
+  ([matcher]
+   (.getByDisplayValue screen matcher))
+  ([matcher options]
+   (.getByDisplayValue screen matcher (clj->js options))))
 
 (defn get-by-alt-text
-  ([query]
-   (.getByAltText screen query))
-  ([query options]
-   (.getByAltText screen query (clj->js options))))
+  ([matcher]
+   (.getByAltText screen matcher))
+  ([matcher options]
+   (.getByAltText screen matcher (clj->js options))))
 
 (defn get-by-title
-  ([query]
-   (.getByTitle screen query))
-  ([query options]
-   (.getByTitle screen query (clj->js options))))
+  ([matcher]
+   (.getByTitle screen matcher))
+  ([matcher options]
+   (.getByTitle screen matcher (clj->js options))))
 
 (defn get-by-test-id
-  ([query]
-   (.getByTestId screen query))
-  ([query options]
-   (.getByTestId screen query (clj->js options))))
+  ([matcher]
+   (.getByTestId screen matcher))
+  ([matcher options]
+   (.getByTestId screen matcher (clj->js options))))
 
 (defn query-by-role
-  ([query]
-   (.queryByRole screen query))
-  ([query options]
-   (.queryByRole screen query (clj->js options))))
+  ([matcher]
+   (.queryByRole screen matcher))
+  ([matcher options]
+   (.queryByRole screen matcher (clj->js options))))
 
 (defn query-by-label-text
-  ([query]
-   (.queryByLabelText screen query))
-  ([query options]
-   (.queryByLabelText screen query (clj->js options))))
+  ([matcher]
+   (.queryByLabelText screen matcher))
+  ([matcher options]
+   (.queryByLabelText screen matcher (clj->js options))))
 
 (defn query-by-placeholder-text
-  ([query]
-   (.queryByPlaceholderText screen query))
-  ([query options]
-   (.queryByPlaceholderText screen query (clj->js options))))
+  ([matcher]
+   (.queryByPlaceholderText screen matcher))
+  ([matcher options]
+   (.queryByPlaceholderText screen matcher (clj->js options))))
 
 (defn query-by-text
-  ([query]
-   (.queryByText screen query))
-  ([query options]
-   (.queryByText screen query (clj->js options))))
+  ([matcher]
+   (.queryByText screen matcher))
+  ([matcher options]
+   (.queryByText screen matcher (clj->js options))))
 
 (defn query-by-display-value
-  ([query]
-   (.queryByDisplayValue screen query))
-  ([query options]
-   (.queryByDisplayValue screen query (clj->js options))))
+  ([matcher]
+   (.queryByDisplayValue screen matcher))
+  ([matcher options]
+   (.queryByDisplayValue screen matcher (clj->js options))))
 
 (defn query-by-alt-text
-  ([query]
-   (.queryByAltText screen query))
-  ([query options]
-   (.queryByAltText screen query (clj->js options))))
+  ([matcher]
+   (.queryByAltText screen matcher))
+  ([matcher options]
+   (.queryByAltText screen matcher (clj->js options))))
 
 (defn query-by-title
-  ([query]
-   (.queryByTitle screen query))
-  ([query options]
-   (.queryByTitle screen query (clj->js options))))
+  ([matcher]
+   (.queryByTitle screen matcher))
+  ([matcher options]
+   (.queryByTitle screen matcher (clj->js options))))
 
 (defn query-by-test-id
-  ([query]
-   (.queryByTestId screen query))
-  ([query options]
-   (.queryByTestId screen query (clj->js options))))
+  ([matcher]
+   (.queryByTestId screen matcher))
+  ([matcher options]
+   (.queryByTestId screen matcher (clj->js options))))
 
 (defn find-by-role
-  ([query]
-   (.findByRole screen query))
-  ([query options]
-   (.findByRole screen query (clj->js options))))
+  ([matcher]
+   (.findByRole screen matcher))
+  ([matcher options]
+   (.findByRole screen matcher (clj->js options))))
 
 (defn find-by-label-text
-  ([query]
-   (.findByLabelText screen query))
-  ([query options]
-   (.findByLabelText screen query (clj->js options))))
+  ([matcher]
+   (.findByLabelText screen matcher))
+  ([matcher options]
+   (.findByLabelText screen matcher (clj->js options))))
 
 (defn find-by-placeholder-text
-  ([query]
-   (.findByPlaceholderText screen query))
-  ([query options]
-   (.findByPlaceholderText screen query (clj->js options))))
+  ([matcher]
+   (.findByPlaceholderText screen matcher))
+  ([matcher options]
+   (.findByPlaceholderText screen matcher (clj->js options))))
 
 (defn find-by-text
-  ([query]
-   (.findByText screen query))
-  ([query options]
-   (.findByText screen query (clj->js options))))
+  ([matcher]
+   (.findByText screen matcher))
+  ([matcher options]
+   (.findByText screen matcher (clj->js options))))
 
 (defn find-by-display-value
-  ([query]
-   (.findByDisplayValue screen query))
-  ([query options]
-   (.findByDisplayValue screen query (clj->js options))))
+  ([matcher]
+   (.findByDisplayValue screen matcher))
+  ([matcher options]
+   (.findByDisplayValue screen matcher (clj->js options))))
 
 (defn find-by-alt-text
-  ([query]
-   (.findByAltText screen query))
-  ([query options]
-   (.findByAltText screen query (clj->js options))))
+  ([matcher]
+   (.findByAltText screen matcher))
+  ([matcher options]
+   (.findByAltText screen matcher (clj->js options))))
 
 (defn find-by-title
-  ([query]
-   (.findByTitle screen query))
-  ([query options]
-   (.findByTitle screen query (clj->js options))))
+  ([matcher]
+   (.findByTitle screen matcher))
+  ([matcher options]
+   (.findByTitle screen matcher (clj->js options))))
 
 (defn find-by-test-id
-  ([query]
-   (.findByTestId screen query))
-  ([query options]
-   (.findByTestId screen query (clj->js options))))
+  ([matcher]
+   (.findByTestId screen matcher))
+  ([matcher options]
+   (.findByTestId screen matcher (clj->js options))))
 
 (defn get-all-by-role
-  ([query]
-   (.getAllByRole screen query))
-  ([query options]
-   (.getAllByRole screen query (clj->js options))))
+  ([matcher]
+   (.getAllByRole screen matcher))
+  ([matcher options]
+   (.getAllByRole screen matcher (clj->js options))))
 
 (defn get-all-by-label-text
-  ([query]
-   (.getAllByLabelText screen query))
-  ([query options]
-   (.getAllByLabelText screen query (clj->js options))))
+  ([matcher]
+   (.getAllByLabelText screen matcher))
+  ([matcher options]
+   (.getAllByLabelText screen matcher (clj->js options))))
 
 (defn get-all-by-placeholder-text
-  ([query]
-   (.getAllByPlaceholderText screen query))
-  ([query options]
-   (.getAllByPlaceholderText screen query (clj->js options))))
+  ([matcher]
+   (.getAllByPlaceholderText screen matcher))
+  ([matcher options]
+   (.getAllByPlaceholderText screen matcher (clj->js options))))
 
 (defn get-all-by-text
-  ([query]
-   (.getAllByText screen query))
-  ([query options]
-   (.getAllByText screen query (clj->js options))))
+  ([matcher]
+   (.getAllByText screen matcher))
+  ([matcher options]
+   (.getAllByText screen matcher (clj->js options))))
 
 (defn get-all-by-display-value
-  ([query]
-   (.getAllByDisplayValue screen query))
-  ([query options]
-   (.getAllByDisplayValue screen query (clj->js options))))
+  ([matcher]
+   (.getAllByDisplayValue screen matcher))
+  ([matcher options]
+   (.getAllByDisplayValue screen matcher (clj->js options))))
 
 (defn get-all-by-alt-text
-  ([query]
-   (.getAllByAltText screen query))
-  ([query options]
-   (.getAllByAltText screen query (clj->js options))))
+  ([matcher]
+   (.getAllByAltText screen matcher))
+  ([matcher options]
+   (.getAllByAltText screen matcher (clj->js options))))
 
 (defn get-all-by-title
-  ([query]
-   (.getAllByTitle screen query))
-  ([query options]
-   (.getAllByTitle screen query (clj->js options))))
+  ([matcher]
+   (.getAllByTitle screen matcher))
+  ([matcher options]
+   (.getAllByTitle screen matcher (clj->js options))))
 
 (defn get-all-by-test-id
-  ([query]
-   (.getAllByTestId screen query))
-  ([query options]
-   (.getAllByTestId screen query (clj->js options))))
+  ([matcher]
+   (.getAllByTestId screen matcher))
+  ([matcher options]
+   (.getAllByTestId screen matcher (clj->js options))))
 
 (defn query-all-by-role
-  ([query]
-   (.queryAllByRole screen query))
-  ([query options]
-   (.queryAllByRole screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByRole screen matcher))
+  ([matcher options]
+   (.queryAllByRole screen matcher (clj->js options))))
 
 (defn query-all-by-label-text
-  ([query]
-   (.queryAllByLabelText screen query))
-  ([query options]
-   (.queryAllByLabelText screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByLabelText screen matcher))
+  ([matcher options]
+   (.queryAllByLabelText screen matcher (clj->js options))))
 
 (defn query-all-by-placeholder-text
-  ([query]
-   (.queryAllByPlaceholderText screen query))
-  ([query options]
-   (.queryAllByPlaceholderText screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByPlaceholderText screen matcher))
+  ([matcher options]
+   (.queryAllByPlaceholderText screen matcher (clj->js options))))
 
 (defn query-all-by-text
-  ([query]
-   (.queryAllByText screen query))
-  ([query options]
-   (.queryAllByText screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByText screen matcher))
+  ([matcher options]
+   (.queryAllByText screen matcher (clj->js options))))
 
 (defn query-all-by-display-value
-  ([query]
-   (.queryAllByDisplayValue screen query))
-  ([query options]
-   (.queryAllByDisplayValue screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByDisplayValue screen matcher))
+  ([matcher options]
+   (.queryAllByDisplayValue screen matcher (clj->js options))))
 
 (defn query-all-by-alt-text
-  ([query]
-   (.queryAllByAltText screen query))
-  ([query options]
-   (.queryAllByAltText screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByAltText screen matcher))
+  ([matcher options]
+   (.queryAllByAltText screen matcher (clj->js options))))
 
 (defn query-all-by-title
-  ([query]
-   (.queryAllByTitle screen query))
-  ([query options]
-   (.queryAllByTitle screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByTitle screen matcher))
+  ([matcher options]
+   (.queryAllByTitle screen matcher (clj->js options))))
 
 (defn query-all-by-test-id
-  ([query]
-   (.queryAllByTestId screen query))
-  ([query options]
-   (.queryAllByTestId screen query (clj->js options))))
+  ([matcher]
+   (.queryAllByTestId screen matcher))
+  ([matcher options]
+   (.queryAllByTestId screen matcher (clj->js options))))
 
 (defn find-all-by-role
-  ([query]
-   (.findAllByRole screen query))
-  ([query options]
-   (.findAllByRole screen query (clj->js options))))
+  ([matcher]
+   (.findAllByRole screen matcher))
+  ([matcher options]
+   (.findAllByRole screen matcher (clj->js options))))
 
 (defn find-all-by-label-text
-  ([query]
-   (.findAllByLabelText screen query))
-  ([query options]
-   (.findAllByLabelText screen query (clj->js options))))
+  ([matcher]
+   (.findAllByLabelText screen matcher))
+  ([matcher options]
+   (.findAllByLabelText screen matcher (clj->js options))))
 
 (defn find-all-by-placeholder-text
-  ([query]
-   (.findAllByPlaceholderText screen query))
-  ([query options]
-   (.findAllByPlaceholderText screen query (clj->js options))))
+  ([matcher]
+   (.findAllByPlaceholderText screen matcher))
+  ([matcher options]
+   (.findAllByPlaceholderText screen matcher (clj->js options))))
 
 (defn find-all-by-text
-  ([query]
-   (.findAllByText screen query))
-  ([query options]
-   (.findAllByText screen query (clj->js options))))
+  ([matcher]
+   (.findAllByText screen matcher))
+  ([matcher options]
+   (.findAllByText screen matcher (clj->js options))))
 
 (defn find-all-by-display-value
-  ([query]
-   (.findAllByDisplayValue screen query))
-  ([query options]
-   (.findAllByDisplayValue screen query (clj->js options))))
+  ([matcher]
+   (.findAllByDisplayValue screen matcher))
+  ([matcher options]
+   (.findAllByDisplayValue screen matcher (clj->js options))))
 
 (defn find-all-by-alt-text
-  ([query]
-   (.findAllByAltText screen query))
-  ([query options]
-   (.findAllByAltText screen query (clj->js options))))
+  ([matcher]
+   (.findAllByAltText screen matcher))
+  ([matcher options]
+   (.findAllByAltText screen matcher (clj->js options))))
 
 (defn find-all-by-title
-  ([query]
-   (.findAllByTitle screen query))
-  ([query options]
-   (.findAllByTitle screen query (clj->js options))))
+  ([matcher]
+   (.findAllByTitle screen matcher))
+  ([matcher options]
+   (.findAllByTitle screen matcher (clj->js options))))
 
 (defn find-all-by-test-id
-  ([query]
-   (.findAllByTestId screen query))
-  ([query options]
-   (.findAllByTestId screen query (clj->js options))))
+  ([matcher]
+   (.findAllByTestId screen matcher))
+  ([matcher options]
+   (.findAllByTestId screen matcher (clj->js options))))
 ;; End - Generated Code (Do not modify manually)
