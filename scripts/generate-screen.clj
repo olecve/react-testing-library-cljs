@@ -27,8 +27,8 @@
     ""
     string))
 
-(let [query-types ["getBy" "queryBy" "findBy" "getAllBy" "queryAllBy" "findAllBy"]
-      query-values ["Role" "LabelText" "PlaceholderText" "Text" "DisplayValue" "AltText" "Title" "TestId"]
+(let [query-types ["get" "query" "find" "getAll" "queryAll" "findAll"]
+      query-values ["ByRole" "ByLabelText" "ByPlaceholderText" "ByText" "ByDisplayValue" "ByAltText" "ByTitle" "ByTestId"]
       queries (for [query-type query-types
                     query-value query-values]
                 (str query-type query-value))
