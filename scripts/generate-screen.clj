@@ -7,7 +7,7 @@
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
 
-(def query-fn-template (slurp "query-fn-template.clj"))
+(def query-fn-template (slurp "query-fn.template.clj"))
 
 (defn insert-string [original string position]
   (str (subs original 0 position)
