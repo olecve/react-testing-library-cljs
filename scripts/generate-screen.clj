@@ -28,14 +28,22 @@
     string))
 
 (let [query-types ["get" "query" "find" "getAll" "queryAll" "findAll"]
-      query-values [{:by "ByRole"}
-                    {:by "ByLabelText"}
-                    {:by "ByPlaceholderText"}
-                    {:by "ByText"}
-                    {:by "ByDisplayValue"}
-                    {:by "ByAltText"}
-                    {:by "ByTitle"}
-                    {:by "ByTestId"}]
+      query-values [{:by "ByRole"
+                     :url "https://testing-library.com/docs/queries/byrole"}
+                    {:by "ByLabelText"
+                     :url "https://testing-library.com/docs/queries/bylabeltext"}
+                    {:by "ByPlaceholderText"
+                     :url "https://testing-library.com/docs/queries/byplaceholdertext"}
+                    {:by "ByText"
+                     :url "https://testing-library.com/docs/queries/bytext"}
+                    {:by "ByDisplayValue"
+                     :url "https://testing-library.com/docs/queries/bydisplayvalue"}
+                    {:by "ByAltText"
+                     :url "https://testing-library.com/docs/queries/byalttext"}
+                    {:by "ByTitle"
+                     :url "https://testing-library.com/docs/queries/bytitle"}
+                    {:by "ByTestId"
+                     :url "https://testing-library.com/docs/queries/bytestid"}]
       queries (for [query-type query-types
                     query-value query-values]
                 (str query-type (:by query-value)))
