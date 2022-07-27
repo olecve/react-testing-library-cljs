@@ -28,10 +28,17 @@
     string))
 
 (let [query-types ["get" "query" "find" "getAll" "queryAll" "findAll"]
-      query-values ["ByRole" "ByLabelText" "ByPlaceholderText" "ByText" "ByDisplayValue" "ByAltText" "ByTitle" "ByTestId"]
+      query-values [{:by "ByRole"}
+                    {:by "ByLabelText"}
+                    {:by "ByPlaceholderText"}
+                    {:by "ByText"}
+                    {:by "ByDisplayValue"}
+                    {:by "ByAltText"}
+                    {:by "ByTitle"}
+                    {:by "ByTestId"}]
       queries (for [query-type query-types
                     query-value query-values]
-                (str query-type query-value))
+                (str query-type (:by query-value)))
       query-fns (->> queries
                      (map #(-> query-fn-template
                                (clojure.string/replace "$cljs-fn-name" (camel-case->kebab-case %))
