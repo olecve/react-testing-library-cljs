@@ -1,5 +1,7 @@
 (defn $cljs-fn-name
-  "Original documentation:
+  "$docstring
+
+  Original documentation:
    - $url"
   ([matcher]
    (.$js-fn-name screen matcher))

@@ -28,12 +28,36 @@
     ""
     string))
 
-(let [query-types [{:type "getBy"}
-                   {:type "queryBy"}
-                   {:type "findBy"}
-                   {:type "getAllBy"}
-                   {:type "queryAllBy"}
-                   {:type "findAllBy"}]
+(let [query-types [{:type "getBy"
+                    :docstring (str "0 Matches  - Throw error\n  "
+                                    "1 Match    - Return element\n  "
+                                    ">1 Matches - Throw error\n  "
+                                    "Retry (Async/Await) - No")}
+                   {:type "queryBy"
+                    :docstring (str "0 Matches  - Return null\n  "
+                                    "1 Match    - Return element\n  "
+                                    ">1 Matches - Throw error\n  "
+                                    "Retry (Async/Await) - No")}
+                   {:type "findBy"
+                    :docstring (str "0 Matches  - Throw error\n  "
+                                    "1 Match    - Return element\n  "
+                                    ">1 Matches - Throw error\n  "
+                                    "Retry (Async/Await) - Yes")}
+                   {:type "getAllBy"
+                    :docstring (str "0 Matches  - Throw error\n  "
+                                    "1 Match    - Return array\n  "
+                                    ">1 Matches - Return array\n  "
+                                    "Retry (Async/Await) - No")}
+                   {:type "queryAllBy"
+                    :docstring (str "0 Matches  - Return []\n  "
+                                    "1 Match    - Return array\n  "
+                                    ">1 Matches - Return array\n  "
+                                    "Retry (Async/Await) - No")}
+                   {:type "findAllBy"
+                    :docstring (str "0 Matches  - Return []\n  "
+                                    "1 Match    - Throw error\n  "
+                                    ">1 Matches - Return array\n  "
+                                    "Retry (Async/Await) - Yes")}]
       query-values [{:by "Role"
                      :url "https://testing-library.com/docs/queries/byrole"}
                     {:by "LabelText"
@@ -56,11 +80,13 @@
                       cljs-fn-name (camel-case->kebab-case js-fn-name)]
                   {:cljs-fn-name cljs-fn-name
                    :js-fn-name js-fn-name
-                   :url (:url query-value)}))
+                   :url (:url query-value)
+                   :docstring (:docstring query-type)}))
       query-fns (->> queries
                      (map #(-> query-fn-template
                                (str/replace "$cljs-fn-name" (:cljs-fn-name %))
                                (str/replace "$js-fn-name" (:js-fn-name %))
+                               (str/replace "$docstring" (:docstring %))
                                (str/replace "$url" (:url %))))
                      (str/join "\n"))
       source-file (slurp screen-source-file)

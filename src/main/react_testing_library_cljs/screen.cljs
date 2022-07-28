@@ -9,7 +9,12 @@
 ;; Refer to https://testing-library.com/docs/queries/about/ for more details about queries
 ;; Begin - Generated Code (Do not modify manually)
 (defn get-by-role
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
    (.getByRole screen matcher))
@@ -17,7 +22,12 @@
    (.getByRole screen matcher (clj->js options))))
 
 (defn get-by-label-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
    (.getByLabelText screen matcher))
@@ -25,7 +35,12 @@
    (.getByLabelText screen matcher (clj->js options))))
 
 (defn get-by-placeholder-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
    (.getByPlaceholderText screen matcher))
@@ -33,7 +48,12 @@
    (.getByPlaceholderText screen matcher (clj->js options))))
 
 (defn get-by-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
    (.getByText screen matcher))
@@ -41,7 +61,12 @@
    (.getByText screen matcher (clj->js options))))
 
 (defn get-by-display-value
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
    (.getByDisplayValue screen matcher))
@@ -49,7 +74,12 @@
    (.getByDisplayValue screen matcher (clj->js options))))
 
 (defn get-by-alt-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
    (.getByAltText screen matcher))
@@ -57,7 +87,12 @@
    (.getByAltText screen matcher (clj->js options))))
 
 (defn get-by-title
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
    (.getByTitle screen matcher))
@@ -65,7 +100,12 @@
    (.getByTitle screen matcher (clj->js options))))
 
 (defn get-by-test-id
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
    (.getByTestId screen matcher))
@@ -73,7 +113,12 @@
    (.getByTestId screen matcher (clj->js options))))
 
 (defn query-by-role
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
    (.queryByRole screen matcher))
@@ -81,7 +126,12 @@
    (.queryByRole screen matcher (clj->js options))))
 
 (defn query-by-label-text
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
    (.queryByLabelText screen matcher))
@@ -89,7 +139,12 @@
    (.queryByLabelText screen matcher (clj->js options))))
 
 (defn query-by-placeholder-text
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
    (.queryByPlaceholderText screen matcher))
@@ -97,7 +152,12 @@
    (.queryByPlaceholderText screen matcher (clj->js options))))
 
 (defn query-by-text
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
    (.queryByText screen matcher))
@@ -105,7 +165,12 @@
    (.queryByText screen matcher (clj->js options))))
 
 (defn query-by-display-value
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
    (.queryByDisplayValue screen matcher))
@@ -113,7 +178,12 @@
    (.queryByDisplayValue screen matcher (clj->js options))))
 
 (defn query-by-alt-text
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
    (.queryByAltText screen matcher))
@@ -121,7 +191,12 @@
    (.queryByAltText screen matcher (clj->js options))))
 
 (defn query-by-title
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
    (.queryByTitle screen matcher))
@@ -129,7 +204,12 @@
    (.queryByTitle screen matcher (clj->js options))))
 
 (defn query-by-test-id
-  "Original documentation:
+  "0 Matches  - Return null
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
    (.queryByTestId screen matcher))
@@ -137,7 +217,12 @@
    (.queryByTestId screen matcher (clj->js options))))
 
 (defn find-by-role
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
    (.findByRole screen matcher))
@@ -145,7 +230,12 @@
    (.findByRole screen matcher (clj->js options))))
 
 (defn find-by-label-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
    (.findByLabelText screen matcher))
@@ -153,7 +243,12 @@
    (.findByLabelText screen matcher (clj->js options))))
 
 (defn find-by-placeholder-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
    (.findByPlaceholderText screen matcher))
@@ -161,7 +256,12 @@
    (.findByPlaceholderText screen matcher (clj->js options))))
 
 (defn find-by-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
    (.findByText screen matcher))
@@ -169,7 +269,12 @@
    (.findByText screen matcher (clj->js options))))
 
 (defn find-by-display-value
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
    (.findByDisplayValue screen matcher))
@@ -177,7 +282,12 @@
    (.findByDisplayValue screen matcher (clj->js options))))
 
 (defn find-by-alt-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
    (.findByAltText screen matcher))
@@ -185,7 +295,12 @@
    (.findByAltText screen matcher (clj->js options))))
 
 (defn find-by-title
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
    (.findByTitle screen matcher))
@@ -193,7 +308,12 @@
    (.findByTitle screen matcher (clj->js options))))
 
 (defn find-by-test-id
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return element
+  >1 Matches - Throw error
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
    (.findByTestId screen matcher))
@@ -201,7 +321,12 @@
    (.findByTestId screen matcher (clj->js options))))
 
 (defn get-all-by-role
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
    (.getAllByRole screen matcher))
@@ -209,7 +334,12 @@
    (.getAllByRole screen matcher (clj->js options))))
 
 (defn get-all-by-label-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
    (.getAllByLabelText screen matcher))
@@ -217,7 +347,12 @@
    (.getAllByLabelText screen matcher (clj->js options))))
 
 (defn get-all-by-placeholder-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
    (.getAllByPlaceholderText screen matcher))
@@ -225,7 +360,12 @@
    (.getAllByPlaceholderText screen matcher (clj->js options))))
 
 (defn get-all-by-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
    (.getAllByText screen matcher))
@@ -233,7 +373,12 @@
    (.getAllByText screen matcher (clj->js options))))
 
 (defn get-all-by-display-value
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
    (.getAllByDisplayValue screen matcher))
@@ -241,7 +386,12 @@
    (.getAllByDisplayValue screen matcher (clj->js options))))
 
 (defn get-all-by-alt-text
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
    (.getAllByAltText screen matcher))
@@ -249,7 +399,12 @@
    (.getAllByAltText screen matcher (clj->js options))))
 
 (defn get-all-by-title
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
    (.getAllByTitle screen matcher))
@@ -257,7 +412,12 @@
    (.getAllByTitle screen matcher (clj->js options))))
 
 (defn get-all-by-test-id
-  "Original documentation:
+  "0 Matches  - Throw error
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
    (.getAllByTestId screen matcher))
@@ -265,7 +425,12 @@
    (.getAllByTestId screen matcher (clj->js options))))
 
 (defn query-all-by-role
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
    (.queryAllByRole screen matcher))
@@ -273,7 +438,12 @@
    (.queryAllByRole screen matcher (clj->js options))))
 
 (defn query-all-by-label-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
    (.queryAllByLabelText screen matcher))
@@ -281,7 +451,12 @@
    (.queryAllByLabelText screen matcher (clj->js options))))
 
 (defn query-all-by-placeholder-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
    (.queryAllByPlaceholderText screen matcher))
@@ -289,7 +464,12 @@
    (.queryAllByPlaceholderText screen matcher (clj->js options))))
 
 (defn query-all-by-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
    (.queryAllByText screen matcher))
@@ -297,7 +477,12 @@
    (.queryAllByText screen matcher (clj->js options))))
 
 (defn query-all-by-display-value
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
    (.queryAllByDisplayValue screen matcher))
@@ -305,7 +490,12 @@
    (.queryAllByDisplayValue screen matcher (clj->js options))))
 
 (defn query-all-by-alt-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
    (.queryAllByAltText screen matcher))
@@ -313,7 +503,12 @@
    (.queryAllByAltText screen matcher (clj->js options))))
 
 (defn query-all-by-title
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
    (.queryAllByTitle screen matcher))
@@ -321,7 +516,12 @@
    (.queryAllByTitle screen matcher (clj->js options))))
 
 (defn query-all-by-test-id
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Return array
+  >1 Matches - Return array
+  Retry (Async/Await) - No
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
    (.queryAllByTestId screen matcher))
@@ -329,7 +529,12 @@
    (.queryAllByTestId screen matcher (clj->js options))))
 
 (defn find-all-by-role
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
    (.findAllByRole screen matcher))
@@ -337,7 +542,12 @@
    (.findAllByRole screen matcher (clj->js options))))
 
 (defn find-all-by-label-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
    (.findAllByLabelText screen matcher))
@@ -345,7 +555,12 @@
    (.findAllByLabelText screen matcher (clj->js options))))
 
 (defn find-all-by-placeholder-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
    (.findAllByPlaceholderText screen matcher))
@@ -353,7 +568,12 @@
    (.findAllByPlaceholderText screen matcher (clj->js options))))
 
 (defn find-all-by-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
    (.findAllByText screen matcher))
@@ -361,7 +581,12 @@
    (.findAllByText screen matcher (clj->js options))))
 
 (defn find-all-by-display-value
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
    (.findAllByDisplayValue screen matcher))
@@ -369,7 +594,12 @@
    (.findAllByDisplayValue screen matcher (clj->js options))))
 
 (defn find-all-by-alt-text
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
    (.findAllByAltText screen matcher))
@@ -377,7 +607,12 @@
    (.findAllByAltText screen matcher (clj->js options))))
 
 (defn find-all-by-title
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
    (.findAllByTitle screen matcher))
@@ -385,7 +620,12 @@
    (.findAllByTitle screen matcher (clj->js options))))
 
 (defn find-all-by-test-id
-  "Original documentation:
+  "0 Matches  - Return []
+  1 Match    - Throw error
+  >1 Matches - Return array
+  Retry (Async/Await) - Yes
+
+  Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
    (.findAllByTestId screen matcher))
