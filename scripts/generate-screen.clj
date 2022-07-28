@@ -28,26 +28,31 @@
     ""
     string))
 
-(let [query-types ["get" "query" "find" "getAll" "queryAll" "findAll"]
-      query-values [{:by "ByRole"
+(let [query-types [{:type "getBy"}
+                   {:type "queryBy"}
+                   {:type "findBy"}
+                   {:type "getAllBy"}
+                   {:type "queryAllBy"}
+                   {:type "findAllBy"}]
+      query-values [{:by "Role"
                      :url "https://testing-library.com/docs/queries/byrole"}
-                    {:by "ByLabelText"
+                    {:by "LabelText"
                      :url "https://testing-library.com/docs/queries/bylabeltext"}
-                    {:by "ByPlaceholderText"
+                    {:by "PlaceholderText"
                      :url "https://testing-library.com/docs/queries/byplaceholdertext"}
-                    {:by "ByText"
+                    {:by "Text"
                      :url "https://testing-library.com/docs/queries/bytext"}
-                    {:by "ByDisplayValue"
+                    {:by "DisplayValue"
                      :url "https://testing-library.com/docs/queries/bydisplayvalue"}
-                    {:by "ByAltText"
+                    {:by "AltText"
                      :url "https://testing-library.com/docs/queries/byalttext"}
-                    {:by "ByTitle"
+                    {:by "Title"
                      :url "https://testing-library.com/docs/queries/bytitle"}
-                    {:by "ByTestId"
+                    {:by "TestId"
                      :url "https://testing-library.com/docs/queries/bytestid"}]
       queries (for [query-type query-types
                     query-value query-values]
-                (let [js-fn-name (str query-type (:by query-value))
+                (let [js-fn-name (str (:type query-type) (:by query-value))
                       cljs-fn-name (camel-case->kebab-case js-fn-name)]
                   {:cljs-fn-name cljs-fn-name
                    :js-fn-name js-fn-name
