@@ -1,7 +1,7 @@
 {
   "name": "react-testing-library-cljs",
   "scripts": {
-    "generate:screen": "cd scripts && bb ./generate-screen.clj",
+    "generate:screen": "cd scripts && bb ./generate_screen.clj",
     "generate:fire-event": "cd scripts && bb ./generate_fire_event.clj",
     "watch": "npx shadow-cljs watch app",
     "release": "npx shadow-cljs release app"

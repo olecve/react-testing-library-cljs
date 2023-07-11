@@ -1,6 +1,5 @@
 #!/usr/bin/env bb
 
-(require '[babashka.deps :as deps])
 (require '[clojure.string :as str])
 
 (def screen-source-file "../src/main/react_testing_library_cljs/screen.cljs")
@@ -8,7 +7,7 @@
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
 
-(def fire-event-fn-template (slurp "query-fn.template.clj"))
+(def fire-event-fn-template (slurp "query_fn.template.clj"))
 
 (defn insert-string [original string position]
   (str (subs original 0 position)
