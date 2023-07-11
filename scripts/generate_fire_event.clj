@@ -114,7 +114,7 @@
 
 (let [event-type-fns (->> event-types
                           (map #(-> fire-event-fn-template
-                                    (str/replace "$cljs-fn-name" %)
+                                    (str/replace "$cljs-fn-name" (camel-case->kebab-case %))
                                     (str/replace "$js-event-type" %)))
                           (str/join "\n"))
       source-file (slurp screen-source-file)

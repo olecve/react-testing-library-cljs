@@ -22,37 +22,37 @@
   ([element options]
    (.-paste fireEvent element options)))
 
-(defn compositionEnd
+(defn composition-end
   ([element]
    (.-compositionEnd fireEvent element))
   ([element options]
    (.-compositionEnd fireEvent element options)))
 
-(defn compositionStart
+(defn composition-start
   ([element]
    (.-compositionStart fireEvent element))
   ([element options]
    (.-compositionStart fireEvent element options)))
 
-(defn compositionUpdate
+(defn composition-update
   ([element]
    (.-compositionUpdate fireEvent element))
   ([element options]
    (.-compositionUpdate fireEvent element options)))
 
-(defn keyDown
+(defn key-down
   ([element]
    (.-keyDown fireEvent element))
   ([element options]
    (.-keyDown fireEvent element options)))
 
-(defn keyPress
+(defn key-press
   ([element]
    (.-keyPress fireEvent element))
   ([element options]
    (.-keyPress fireEvent element options)))
 
-(defn keyUp
+(defn key-up
   ([element]
    (.-keyUp fireEvent element))
   ([element options]
@@ -70,13 +70,13 @@
   ([element options]
    (.-blur fireEvent element options)))
 
-(defn focusIn
+(defn focus-in
   ([element]
    (.-focusIn fireEvent element))
   ([element options]
    (.-focusIn fireEvent element options)))
 
-(defn focusOut
+(defn focus-out
   ([element]
    (.-focusOut fireEvent element))
   ([element options]
@@ -118,13 +118,13 @@
   ([element options]
    (.-click fireEvent element options)))
 
-(defn contextMenu
+(defn context-menu
   ([element]
    (.-contextMenu fireEvent element))
   ([element options]
    (.-contextMenu fireEvent element options)))
 
-(defn dblClick
+(defn dbl-click
   ([element]
    (.-dblClick fireEvent element))
   ([element options]
@@ -136,37 +136,37 @@
   ([element options]
    (.-drag fireEvent element options)))
 
-(defn dragEnd
+(defn drag-end
   ([element]
    (.-dragEnd fireEvent element))
   ([element options]
    (.-dragEnd fireEvent element options)))
 
-(defn dragEnter
+(defn drag-enter
   ([element]
    (.-dragEnter fireEvent element))
   ([element options]
    (.-dragEnter fireEvent element options)))
 
-(defn dragExit
+(defn drag-exit
   ([element]
    (.-dragExit fireEvent element))
   ([element options]
    (.-dragExit fireEvent element options)))
 
-(defn dragLeave
+(defn drag-leave
   ([element]
    (.-dragLeave fireEvent element))
   ([element options]
    (.-dragLeave fireEvent element options)))
 
-(defn dragOver
+(defn drag-over
   ([element]
    (.-dragOver fireEvent element))
   ([element options]
    (.-dragOver fireEvent element options)))
 
-(defn dragStart
+(defn drag-start
   ([element]
    (.-dragStart fireEvent element))
   ([element options]
@@ -178,49 +178,49 @@
   ([element options]
    (.-drop fireEvent element options)))
 
-(defn mouseDown
+(defn mouse-down
   ([element]
    (.-mouseDown fireEvent element))
   ([element options]
    (.-mouseDown fireEvent element options)))
 
-(defn mouseEnter
+(defn mouse-enter
   ([element]
    (.-mouseEnter fireEvent element))
   ([element options]
    (.-mouseEnter fireEvent element options)))
 
-(defn mouseLeave
+(defn mouse-leave
   ([element]
    (.-mouseLeave fireEvent element))
   ([element options]
    (.-mouseLeave fireEvent element options)))
 
-(defn mouseMove
+(defn mouse-move
   ([element]
    (.-mouseMove fireEvent element))
   ([element options]
    (.-mouseMove fireEvent element options)))
 
-(defn mouseOut
+(defn mouse-out
   ([element]
    (.-mouseOut fireEvent element))
   ([element options]
    (.-mouseOut fireEvent element options)))
 
-(defn mouseOver
+(defn mouse-over
   ([element]
    (.-mouseOver fireEvent element))
   ([element options]
    (.-mouseOver fireEvent element options)))
 
-(defn mouseUp
+(defn mouse-up
   ([element]
    (.-mouseUp fireEvent element))
   ([element options]
    (.-mouseUp fireEvent element options)))
 
-(defn popState
+(defn pop-state
   ([element]
    (.-popState fireEvent element))
   ([element options]
@@ -232,25 +232,25 @@
   ([element options]
    (.-select fireEvent element options)))
 
-(defn touchCancel
+(defn touch-cancel
   ([element]
    (.-touchCancel fireEvent element))
   ([element options]
    (.-touchCancel fireEvent element options)))
 
-(defn touchEnd
+(defn touch-end
   ([element]
    (.-touchEnd fireEvent element))
   ([element options]
    (.-touchEnd fireEvent element options)))
 
-(defn touchMove
+(defn touch-move
   ([element]
    (.-touchMove fireEvent element))
   ([element options]
    (.-touchMove fireEvent element options)))
 
-(defn touchStart
+(defn touch-start
   ([element]
    (.-touchStart fireEvent element))
   ([element options]
@@ -274,19 +274,19 @@
   ([element options]
    (.-abort fireEvent element options)))
 
-(defn canPlay
+(defn can-play
   ([element]
    (.-canPlay fireEvent element))
   ([element options]
    (.-canPlay fireEvent element options)))
 
-(defn canPlayThrough
+(defn can-play-through
   ([element]
    (.-canPlayThrough fireEvent element))
   ([element options]
    (.-canPlayThrough fireEvent element options)))
 
-(defn durationChange
+(defn duration-change
   ([element]
    (.-durationChange fireEvent element))
   ([element options]
@@ -310,19 +310,19 @@
   ([element options]
    (.-ended fireEvent element options)))
 
-(defn loadedData
+(defn loaded-data
   ([element]
    (.-loadedData fireEvent element))
   ([element options]
    (.-loadedData fireEvent element options)))
 
-(defn loadedMetadata
+(defn loaded-metadata
   ([element]
    (.-loadedMetadata fireEvent element))
   ([element options]
    (.-loadedMetadata fireEvent element options)))
 
-(defn loadStart
+(defn load-start
   ([element]
    (.-loadStart fireEvent element))
   ([element options]
@@ -352,7 +352,7 @@
   ([element options]
    (.-progress fireEvent element options)))
 
-(defn rateChange
+(defn rate-change
   ([element]
    (.-rateChange fireEvent element))
   ([element options]
@@ -382,13 +382,13 @@
   ([element options]
    (.-suspend fireEvent element options)))
 
-(defn timeUpdate
+(defn time-update
   ([element]
    (.-timeUpdate fireEvent element))
   ([element options]
    (.-timeUpdate fireEvent element options)))
 
-(defn volumeChange
+(defn volume-change
   ([element]
    (.-volumeChange fireEvent element))
   ([element options]
@@ -412,91 +412,91 @@
   ([element options]
    (.-error fireEvent element options)))
 
-(defn animationStart
+(defn animation-start
   ([element]
    (.-animationStart fireEvent element))
   ([element options]
    (.-animationStart fireEvent element options)))
 
-(defn animationEnd
+(defn animation-end
   ([element]
    (.-animationEnd fireEvent element))
   ([element options]
    (.-animationEnd fireEvent element options)))
 
-(defn animationIteration
+(defn animation-iteration
   ([element]
    (.-animationIteration fireEvent element))
   ([element options]
    (.-animationIteration fireEvent element options)))
 
-(defn transitionEnd
+(defn transition-end
   ([element]
    (.-transitionEnd fireEvent element))
   ([element options]
    (.-transitionEnd fireEvent element options)))
 
-(defn doubleClick
+(defn double-click
   ([element]
    (.-doubleClick fireEvent element))
   ([element options]
    (.-doubleClick fireEvent element options)))
 
-(defn pointerOver
+(defn pointer-over
   ([element]
    (.-pointerOver fireEvent element))
   ([element options]
    (.-pointerOver fireEvent element options)))
 
-(defn pointerEnter
+(defn pointer-enter
   ([element]
    (.-pointerEnter fireEvent element))
   ([element options]
    (.-pointerEnter fireEvent element options)))
 
-(defn pointerDown
+(defn pointer-down
   ([element]
    (.-pointerDown fireEvent element))
   ([element options]
    (.-pointerDown fireEvent element options)))
 
-(defn pointerMove
+(defn pointer-move
   ([element]
    (.-pointerMove fireEvent element))
   ([element options]
    (.-pointerMove fireEvent element options)))
 
-(defn pointerUp
+(defn pointer-up
   ([element]
    (.-pointerUp fireEvent element))
   ([element options]
    (.-pointerUp fireEvent element options)))
 
-(defn pointerCancel
+(defn pointer-cancel
   ([element]
    (.-pointerCancel fireEvent element))
   ([element options]
    (.-pointerCancel fireEvent element options)))
 
-(defn pointerOut
+(defn pointer-out
   ([element]
    (.-pointerOut fireEvent element))
   ([element options]
    (.-pointerOut fireEvent element options)))
 
-(defn pointerLeave
+(defn pointer-leave
   ([element]
    (.-pointerLeave fireEvent element))
   ([element options]
    (.-pointerLeave fireEvent element options)))
 
-(defn gotPointerCapture
+(defn got-pointer-capture
   ([element]
    (.-gotPointerCapture fireEvent element))
   ([element options]
    (.-gotPointerCapture fireEvent element options)))
 
-(defn lostPointerCapture
+(defn lost-pointer-capture
   ([element]
    (.-lostPointerCapture fireEvent element))
   ([element options]
