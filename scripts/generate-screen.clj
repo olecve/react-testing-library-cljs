@@ -8,7 +8,7 @@
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
 
-(def query-fn-template (slurp "query-fn.template.clj"))
+(def fire-event-fn-template (slurp "query-fn.template.clj"))
 
 (defn insert-string [original string position]
   (str (subs original 0 position)
@@ -21,12 +21,12 @@
 
 (defn camel-case->kebab-case [string]
   (reduce
-    (fn [result char]
-      (if (= (str char) (str/upper-case char))
-        (str result "-" (str/lower-case char))
-        (str result char)))
-    ""
-    string))
+   (fn [result char]
+     (if (= (str char) (str/upper-case char))
+       (str result "-" (str/lower-case char))
+       (str result char)))
+   ""
+   string))
 
 (let [query-types [{:type "getBy"
                     :docstring (str "0 Matches  - Throw error\n  "
@@ -83,7 +83,7 @@
                    :url (:url query-value)
                    :docstring (:docstring query-type)}))
       query-fns (->> queries
-                     (map #(-> query-fn-template
+                     (map #(-> fire-event-fn-template
                                (str/replace "$cljs-fn-name" (:cljs-fn-name %))
                                (str/replace "$js-fn-name" (:js-fn-name %))
                                (str/replace "$docstring" (:docstring %))
