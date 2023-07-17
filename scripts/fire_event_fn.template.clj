@@ -2,4 +2,4 @@
   ([element]
    (.$js-event-type fireEvent element))
   ([element options]
-   (.$js-event-type fireEvent element options)))
+   (.$js-event-type fireEvent element (clj->js options))))

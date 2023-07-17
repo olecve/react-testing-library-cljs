@@ -10,7 +10,7 @@
    (.copy fireEvent element)
    (r/flush))
   ([element options]
-   (.copy fireEvent element options)
+   (.copy fireEvent element (clj->js options))
    (r/flush)))
 
 (defn cut
@@ -18,7 +18,7 @@
    (.cut fireEvent element)
    (r/flush))
   ([element options]
-   (.cut fireEvent element options)
+   (.cut fireEvent element (clj->js options))
    (r/flush)))
 
 (defn paste
@@ -26,7 +26,7 @@
    (.paste fireEvent element)
    (r/flush))
   ([element options]
-   (.paste fireEvent element options)
+   (.paste fireEvent element (clj->js options))
    (r/flush)))
 
 (defn composition-end
@@ -34,7 +34,7 @@
    (.compositionEnd fireEvent element)
    (r/flush))
   ([element options]
-   (.compositionEnd fireEvent element options)
+   (.compositionEnd fireEvent element (clj->js options))
    (r/flush)))
 
 (defn composition-start
@@ -42,7 +42,7 @@
    (.compositionStart fireEvent element)
    (r/flush))
   ([element options]
-   (.compositionStart fireEvent element options)
+   (.compositionStart fireEvent element (clj->js options))
    (r/flush)))
 
 (defn composition-update
@@ -50,7 +50,7 @@
    (.compositionUpdate fireEvent element)
    (r/flush))
   ([element options]
-   (.compositionUpdate fireEvent element options)
+   (.compositionUpdate fireEvent element (clj->js options))
    (r/flush)))
 
 (defn key-down
@@ -58,7 +58,7 @@
    (.keyDown fireEvent element)
    (r/flush))
   ([element options]
-   (.keyDown fireEvent element options)
+   (.keyDown fireEvent element (clj->js options))
    (r/flush)))
 
 (defn key-press
@@ -66,7 +66,7 @@
    (.keyPress fireEvent element)
    (r/flush))
   ([element options]
-   (.keyPress fireEvent element options)
+   (.keyPress fireEvent element (clj->js options))
    (r/flush)))
 
 (defn key-up
@@ -74,7 +74,7 @@
    (.keyUp fireEvent element)
    (r/flush))
   ([element options]
-   (.keyUp fireEvent element options)
+   (.keyUp fireEvent element (clj->js options))
    (r/flush)))
 
 (defn focus
@@ -82,7 +82,7 @@
    (.focus fireEvent element)
    (r/flush))
   ([element options]
-   (.focus fireEvent element options)
+   (.focus fireEvent element (clj->js options))
    (r/flush)))
 
 (defn blur
@@ -90,7 +90,7 @@
    (.blur fireEvent element)
    (r/flush))
   ([element options]
-   (.blur fireEvent element options)
+   (.blur fireEvent element (clj->js options))
    (r/flush)))
 
 (defn focus-in
@@ -98,7 +98,7 @@
    (.focusIn fireEvent element)
    (r/flush))
   ([element options]
-   (.focusIn fireEvent element options)
+   (.focusIn fireEvent element (clj->js options))
    (r/flush)))
 
 (defn focus-out
@@ -106,7 +106,7 @@
    (.focusOut fireEvent element)
    (r/flush))
   ([element options]
-   (.focusOut fireEvent element options)
+   (.focusOut fireEvent element (clj->js options))
    (r/flush)))
 
 (defn change
@@ -114,7 +114,7 @@
    (.change fireEvent element)
    (r/flush))
   ([element options]
-   (.change fireEvent element options)
+   (.change fireEvent element (clj->js options))
    (r/flush)))
 
 (defn input
@@ -122,7 +122,7 @@
    (.input fireEvent element)
    (r/flush))
   ([element options]
-   (.input fireEvent element options)
+   (.input fireEvent element (clj->js options))
    (r/flush)))
 
 (defn invalid
@@ -130,7 +130,7 @@
    (.invalid fireEvent element)
    (r/flush))
   ([element options]
-   (.invalid fireEvent element options)
+   (.invalid fireEvent element (clj->js options))
    (r/flush)))
 
 (defn submit
@@ -138,7 +138,7 @@
    (.submit fireEvent element)
    (r/flush))
   ([element options]
-   (.submit fireEvent element options)
+   (.submit fireEvent element (clj->js options))
    (r/flush)))
 
 (defn reset
@@ -146,7 +146,7 @@
    (.reset fireEvent element)
    (r/flush))
   ([element options]
-   (.reset fireEvent element options)
+   (.reset fireEvent element (clj->js options))
    (r/flush)))
 
 (defn click
@@ -154,7 +154,7 @@
    (.click fireEvent element)
    (r/flush))
   ([element options]
-   (.click fireEvent element options)
+   (.click fireEvent element (clj->js options))
    (r/flush)))
 
 (defn context-menu
@@ -162,7 +162,7 @@
    (.contextMenu fireEvent element)
    (r/flush))
   ([element options]
-   (.contextMenu fireEvent element options)
+   (.contextMenu fireEvent element (clj->js options))
    (r/flush)))
 
 (defn dbl-click
@@ -170,7 +170,7 @@
    (.dblClick fireEvent element)
    (r/flush))
   ([element options]
-   (.dblClick fireEvent element options)
+   (.dblClick fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag
@@ -178,7 +178,7 @@
    (.drag fireEvent element)
    (r/flush))
   ([element options]
-   (.drag fireEvent element options)
+   (.drag fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag-end
@@ -186,7 +186,7 @@
    (.dragEnd fireEvent element)
    (r/flush))
   ([element options]
-   (.dragEnd fireEvent element options)
+   (.dragEnd fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag-enter
@@ -194,7 +194,7 @@
    (.dragEnter fireEvent element)
    (r/flush))
   ([element options]
-   (.dragEnter fireEvent element options)
+   (.dragEnter fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag-exit
@@ -202,7 +202,7 @@
    (.dragExit fireEvent element)
    (r/flush))
   ([element options]
-   (.dragExit fireEvent element options)
+   (.dragExit fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag-leave
@@ -210,7 +210,7 @@
    (.dragLeave fireEvent element)
    (r/flush))
   ([element options]
-   (.dragLeave fireEvent element options)
+   (.dragLeave fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag-over
@@ -218,7 +218,7 @@
    (.dragOver fireEvent element)
    (r/flush))
   ([element options]
-   (.dragOver fireEvent element options)
+   (.dragOver fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drag-start
@@ -226,7 +226,7 @@
    (.dragStart fireEvent element)
    (r/flush))
   ([element options]
-   (.dragStart fireEvent element options)
+   (.dragStart fireEvent element (clj->js options))
    (r/flush)))
 
 (defn drop
@@ -234,7 +234,7 @@
    (.drop fireEvent element)
    (r/flush))
   ([element options]
-   (.drop fireEvent element options)
+   (.drop fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-down
@@ -242,7 +242,7 @@
    (.mouseDown fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseDown fireEvent element options)
+   (.mouseDown fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-enter
@@ -250,7 +250,7 @@
    (.mouseEnter fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseEnter fireEvent element options)
+   (.mouseEnter fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-leave
@@ -258,7 +258,7 @@
    (.mouseLeave fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseLeave fireEvent element options)
+   (.mouseLeave fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-move
@@ -266,7 +266,7 @@
    (.mouseMove fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseMove fireEvent element options)
+   (.mouseMove fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-out
@@ -274,7 +274,7 @@
    (.mouseOut fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseOut fireEvent element options)
+   (.mouseOut fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-over
@@ -282,7 +282,7 @@
    (.mouseOver fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseOver fireEvent element options)
+   (.mouseOver fireEvent element (clj->js options))
    (r/flush)))
 
 (defn mouse-up
@@ -290,7 +290,7 @@
    (.mouseUp fireEvent element)
    (r/flush))
   ([element options]
-   (.mouseUp fireEvent element options)
+   (.mouseUp fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pop-state
@@ -298,7 +298,7 @@
    (.popState fireEvent element)
    (r/flush))
   ([element options]
-   (.popState fireEvent element options)
+   (.popState fireEvent element (clj->js options))
    (r/flush)))
 
 (defn select
@@ -306,7 +306,7 @@
    (.select fireEvent element)
    (r/flush))
   ([element options]
-   (.select fireEvent element options)
+   (.select fireEvent element (clj->js options))
    (r/flush)))
 
 (defn touch-cancel
@@ -314,7 +314,7 @@
    (.touchCancel fireEvent element)
    (r/flush))
   ([element options]
-   (.touchCancel fireEvent element options)
+   (.touchCancel fireEvent element (clj->js options))
    (r/flush)))
 
 (defn touch-end
@@ -322,7 +322,7 @@
    (.touchEnd fireEvent element)
    (r/flush))
   ([element options]
-   (.touchEnd fireEvent element options)
+   (.touchEnd fireEvent element (clj->js options))
    (r/flush)))
 
 (defn touch-move
@@ -330,7 +330,7 @@
    (.touchMove fireEvent element)
    (r/flush))
   ([element options]
-   (.touchMove fireEvent element options)
+   (.touchMove fireEvent element (clj->js options))
    (r/flush)))
 
 (defn touch-start
@@ -338,7 +338,7 @@
    (.touchStart fireEvent element)
    (r/flush))
   ([element options]
-   (.touchStart fireEvent element options)
+   (.touchStart fireEvent element (clj->js options))
    (r/flush)))
 
 (defn scroll
@@ -346,7 +346,7 @@
    (.scroll fireEvent element)
    (r/flush))
   ([element options]
-   (.scroll fireEvent element options)
+   (.scroll fireEvent element (clj->js options))
    (r/flush)))
 
 (defn wheel
@@ -354,7 +354,7 @@
    (.wheel fireEvent element)
    (r/flush))
   ([element options]
-   (.wheel fireEvent element options)
+   (.wheel fireEvent element (clj->js options))
    (r/flush)))
 
 (defn abort
@@ -362,7 +362,7 @@
    (.abort fireEvent element)
    (r/flush))
   ([element options]
-   (.abort fireEvent element options)
+   (.abort fireEvent element (clj->js options))
    (r/flush)))
 
 (defn can-play
@@ -370,7 +370,7 @@
    (.canPlay fireEvent element)
    (r/flush))
   ([element options]
-   (.canPlay fireEvent element options)
+   (.canPlay fireEvent element (clj->js options))
    (r/flush)))
 
 (defn can-play-through
@@ -378,7 +378,7 @@
    (.canPlayThrough fireEvent element)
    (r/flush))
   ([element options]
-   (.canPlayThrough fireEvent element options)
+   (.canPlayThrough fireEvent element (clj->js options))
    (r/flush)))
 
 (defn duration-change
@@ -386,7 +386,7 @@
    (.durationChange fireEvent element)
    (r/flush))
   ([element options]
-   (.durationChange fireEvent element options)
+   (.durationChange fireEvent element (clj->js options))
    (r/flush)))
 
 (defn emptied
@@ -394,7 +394,7 @@
    (.emptied fireEvent element)
    (r/flush))
   ([element options]
-   (.emptied fireEvent element options)
+   (.emptied fireEvent element (clj->js options))
    (r/flush)))
 
 (defn encrypted
@@ -402,7 +402,7 @@
    (.encrypted fireEvent element)
    (r/flush))
   ([element options]
-   (.encrypted fireEvent element options)
+   (.encrypted fireEvent element (clj->js options))
    (r/flush)))
 
 (defn ended
@@ -410,7 +410,7 @@
    (.ended fireEvent element)
    (r/flush))
   ([element options]
-   (.ended fireEvent element options)
+   (.ended fireEvent element (clj->js options))
    (r/flush)))
 
 (defn loaded-data
@@ -418,7 +418,7 @@
    (.loadedData fireEvent element)
    (r/flush))
   ([element options]
-   (.loadedData fireEvent element options)
+   (.loadedData fireEvent element (clj->js options))
    (r/flush)))
 
 (defn loaded-metadata
@@ -426,7 +426,7 @@
    (.loadedMetadata fireEvent element)
    (r/flush))
   ([element options]
-   (.loadedMetadata fireEvent element options)
+   (.loadedMetadata fireEvent element (clj->js options))
    (r/flush)))
 
 (defn load-start
@@ -434,7 +434,7 @@
    (.loadStart fireEvent element)
    (r/flush))
   ([element options]
-   (.loadStart fireEvent element options)
+   (.loadStart fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pause
@@ -442,7 +442,7 @@
    (.pause fireEvent element)
    (r/flush))
   ([element options]
-   (.pause fireEvent element options)
+   (.pause fireEvent element (clj->js options))
    (r/flush)))
 
 (defn play
@@ -450,7 +450,7 @@
    (.play fireEvent element)
    (r/flush))
   ([element options]
-   (.play fireEvent element options)
+   (.play fireEvent element (clj->js options))
    (r/flush)))
 
 (defn playing
@@ -458,7 +458,7 @@
    (.playing fireEvent element)
    (r/flush))
   ([element options]
-   (.playing fireEvent element options)
+   (.playing fireEvent element (clj->js options))
    (r/flush)))
 
 (defn progress
@@ -466,7 +466,7 @@
    (.progress fireEvent element)
    (r/flush))
   ([element options]
-   (.progress fireEvent element options)
+   (.progress fireEvent element (clj->js options))
    (r/flush)))
 
 (defn rate-change
@@ -474,7 +474,7 @@
    (.rateChange fireEvent element)
    (r/flush))
   ([element options]
-   (.rateChange fireEvent element options)
+   (.rateChange fireEvent element (clj->js options))
    (r/flush)))
 
 (defn seeked
@@ -482,7 +482,7 @@
    (.seeked fireEvent element)
    (r/flush))
   ([element options]
-   (.seeked fireEvent element options)
+   (.seeked fireEvent element (clj->js options))
    (r/flush)))
 
 (defn seeking
@@ -490,7 +490,7 @@
    (.seeking fireEvent element)
    (r/flush))
   ([element options]
-   (.seeking fireEvent element options)
+   (.seeking fireEvent element (clj->js options))
    (r/flush)))
 
 (defn stalled
@@ -498,7 +498,7 @@
    (.stalled fireEvent element)
    (r/flush))
   ([element options]
-   (.stalled fireEvent element options)
+   (.stalled fireEvent element (clj->js options))
    (r/flush)))
 
 (defn suspend
@@ -506,7 +506,7 @@
    (.suspend fireEvent element)
    (r/flush))
   ([element options]
-   (.suspend fireEvent element options)
+   (.suspend fireEvent element (clj->js options))
    (r/flush)))
 
 (defn time-update
@@ -514,7 +514,7 @@
    (.timeUpdate fireEvent element)
    (r/flush))
   ([element options]
-   (.timeUpdate fireEvent element options)
+   (.timeUpdate fireEvent element (clj->js options))
    (r/flush)))
 
 (defn volume-change
@@ -522,7 +522,7 @@
    (.volumeChange fireEvent element)
    (r/flush))
   ([element options]
-   (.volumeChange fireEvent element options)
+   (.volumeChange fireEvent element (clj->js options))
    (r/flush)))
 
 (defn waiting
@@ -530,7 +530,7 @@
    (.waiting fireEvent element)
    (r/flush))
   ([element options]
-   (.waiting fireEvent element options)
+   (.waiting fireEvent element (clj->js options))
    (r/flush)))
 
 (defn load
@@ -538,7 +538,7 @@
    (.load fireEvent element)
    (r/flush))
   ([element options]
-   (.load fireEvent element options)
+   (.load fireEvent element (clj->js options))
    (r/flush)))
 
 (defn error
@@ -546,7 +546,7 @@
    (.error fireEvent element)
    (r/flush))
   ([element options]
-   (.error fireEvent element options)
+   (.error fireEvent element (clj->js options))
    (r/flush)))
 
 (defn animation-start
@@ -554,7 +554,7 @@
    (.animationStart fireEvent element)
    (r/flush))
   ([element options]
-   (.animationStart fireEvent element options)
+   (.animationStart fireEvent element (clj->js options))
    (r/flush)))
 
 (defn animation-end
@@ -562,7 +562,7 @@
    (.animationEnd fireEvent element)
    (r/flush))
   ([element options]
-   (.animationEnd fireEvent element options)
+   (.animationEnd fireEvent element (clj->js options))
    (r/flush)))
 
 (defn animation-iteration
@@ -570,7 +570,7 @@
    (.animationIteration fireEvent element)
    (r/flush))
   ([element options]
-   (.animationIteration fireEvent element options)
+   (.animationIteration fireEvent element (clj->js options))
    (r/flush)))
 
 (defn transition-end
@@ -578,7 +578,7 @@
    (.transitionEnd fireEvent element)
    (r/flush))
   ([element options]
-   (.transitionEnd fireEvent element options)
+   (.transitionEnd fireEvent element (clj->js options))
    (r/flush)))
 
 (defn double-click
@@ -586,7 +586,7 @@
    (.doubleClick fireEvent element)
    (r/flush))
   ([element options]
-   (.doubleClick fireEvent element options)
+   (.doubleClick fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-over
@@ -594,7 +594,7 @@
    (.pointerOver fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerOver fireEvent element options)
+   (.pointerOver fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-enter
@@ -602,7 +602,7 @@
    (.pointerEnter fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerEnter fireEvent element options)
+   (.pointerEnter fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-down
@@ -610,7 +610,7 @@
    (.pointerDown fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerDown fireEvent element options)
+   (.pointerDown fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-move
@@ -618,7 +618,7 @@
    (.pointerMove fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerMove fireEvent element options)
+   (.pointerMove fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-up
@@ -626,7 +626,7 @@
    (.pointerUp fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerUp fireEvent element options)
+   (.pointerUp fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-cancel
@@ -634,7 +634,7 @@
    (.pointerCancel fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerCancel fireEvent element options)
+   (.pointerCancel fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-out
@@ -642,7 +642,7 @@
    (.pointerOut fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerOut fireEvent element options)
+   (.pointerOut fireEvent element (clj->js options))
    (r/flush)))
 
 (defn pointer-leave
@@ -650,7 +650,7 @@
    (.pointerLeave fireEvent element)
    (r/flush))
   ([element options]
-   (.pointerLeave fireEvent element options)
+   (.pointerLeave fireEvent element (clj->js options))
    (r/flush)))
 
 (defn got-pointer-capture
@@ -658,7 +658,7 @@
    (.gotPointerCapture fireEvent element)
    (r/flush))
   ([element options]
-   (.gotPointerCapture fireEvent element options)
+   (.gotPointerCapture fireEvent element (clj->js options))
    (r/flush)))
 
 (defn lost-pointer-capture
@@ -666,6 +666,6 @@
    (.lostPointerCapture fireEvent element)
    (r/flush))
   ([element options]
-   (.lostPointerCapture fireEvent element options)
+   (.lostPointerCapture fireEvent element (clj->js options))
    (r/flush)))
 ;; End - Generated Code (Do not modify manually)
