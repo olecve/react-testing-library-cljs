@@ -87,12 +87,8 @@
    "gotPointerCapture"
    "lostPointerCapture"])
 
-(def screen-source-file "../src/main/react_testing_library_cljs/fire_event.cljs")
-
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
-
-(def fire-event-fn-template (slurp "fire_event_fn.template.clj"))
 
 (defn insert-string [original string position]
   (str (subs original 0 position)
@@ -112,15 +108,32 @@
    ""
    string))
 
-(let [event-type-fns (->> event-types
+(let [fire-event-source-file "../src/main/react_testing_library_cljs/fire_event.cljs"
+      fire-event-fn-template (slurp "fire_event_fn.template.clj")
+      event-type-fns (->> event-types
                           (map #(-> fire-event-fn-template
                                     (str/replace "$cljs-fn-name" (camel-case->kebab-case %))
                                     (str/replace "$js-event-type" %)))
                           (str/join "\n"))
-      source-file (slurp screen-source-file)
+      source-file (slurp fire-event-source-file)
       begin-position (+ (str/index-of source-file begin-marker) (count begin-marker))
       end-position (str/index-of source-file end-marker)
       source-file-updated (-> source-file
                               (remove-string-between begin-position end-position)
                               (insert-string event-type-fns begin-position))]
-  (spit screen-source-file source-file-updated))
+  (spit fire-event-source-file source-file-updated))
+
+(let [reagent-fire-event-source-file "../src/main/react_testing_library_cljs/reagent/fire_event.cljs"
+      reagent-fire-event-fn-template (slurp "reagent.fire_event_fn.template.clj")
+      event-type-fns (->> event-types
+                          (map #(-> reagent-fire-event-fn-template
+                                    (str/replace "$cljs-fn-name" (camel-case->kebab-case %))
+                                    (str/replace "$js-event-type" %)))
+                          (str/join "\n"))
+      source-file (slurp reagent-fire-event-source-file)
+      begin-position (+ (str/index-of source-file begin-marker) (count begin-marker))
+      end-position (str/index-of source-file end-marker)
+      source-file-updated (-> source-file
+                              (remove-string-between begin-position end-position)
+                              (insert-string event-type-fns begin-position))]
+  (spit reagent-fire-event-source-file source-file-updated))
