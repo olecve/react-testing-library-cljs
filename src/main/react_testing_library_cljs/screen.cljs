@@ -322,8 +322,8 @@
 
 (defn get-all-by-role
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -335,8 +335,8 @@
 
 (defn get-all-by-label-text
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -348,8 +348,8 @@
 
 (defn get-all-by-placeholder-text
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -361,8 +361,8 @@
 
 (defn get-all-by-text
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -374,8 +374,8 @@
 
 (defn get-all-by-display-value
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -387,8 +387,8 @@
 
 (defn get-all-by-alt-text
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -400,8 +400,8 @@
 
 (defn get-all-by-title
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -413,8 +413,8 @@
 
 (defn get-all-by-test-id
   "0 Matches  - Throw error
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -426,8 +426,8 @@
 
 (defn query-all-by-role
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -439,8 +439,8 @@
 
 (defn query-all-by-label-text
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -452,8 +452,8 @@
 
 (defn query-all-by-placeholder-text
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -465,8 +465,8 @@
 
 (defn query-all-by-text
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -478,8 +478,8 @@
 
 (defn query-all-by-display-value
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -491,8 +491,8 @@
 
 (defn query-all-by-alt-text
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -504,8 +504,8 @@
 
 (defn query-all-by-title
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -517,8 +517,8 @@
 
 (defn query-all-by-test-id
   "0 Matches  - Return []
-  1 Match    - Return array
-  >1 Matches - Return array
+  1 Match    - Return vector
+  >1 Matches - Return vector
   Retry (Async/Await) - No
 
   Original documentation:
@@ -531,7 +531,7 @@
 (defn find-all-by-role
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -544,7 +544,7 @@
 (defn find-all-by-label-text
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -557,7 +557,7 @@
 (defn find-all-by-placeholder-text
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -570,7 +570,7 @@
 (defn find-all-by-text
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -583,7 +583,7 @@
 (defn find-all-by-display-value
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -596,7 +596,7 @@
 (defn find-all-by-alt-text
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -609,7 +609,7 @@
 (defn find-all-by-title
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
@@ -622,7 +622,7 @@
 (defn find-all-by-test-id
   "0 Matches  - Return []
   1 Match    - Throw error
-  >1 Matches - Return array
+  >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
   Original documentation:
