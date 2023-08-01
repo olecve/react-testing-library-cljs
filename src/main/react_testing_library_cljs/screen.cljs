@@ -329,9 +329,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
-   (.getAllByRole screen matcher))
+   (vec (.getAllByRole screen matcher)))
   ([matcher options]
-   (.getAllByRole screen matcher (clj->js options))))
+   (vec (.getAllByRole screen matcher (clj->js options)))))
 
 (defn get-all-by-label-text
   "0 Matches  - Throw error
@@ -342,9 +342,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
-   (.getAllByLabelText screen matcher))
+   (vec (.getAllByLabelText screen matcher)))
   ([matcher options]
-   (.getAllByLabelText screen matcher (clj->js options))))
+   (vec (.getAllByLabelText screen matcher (clj->js options)))))
 
 (defn get-all-by-placeholder-text
   "0 Matches  - Throw error
@@ -355,9 +355,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
-   (.getAllByPlaceholderText screen matcher))
+   (vec (.getAllByPlaceholderText screen matcher)))
   ([matcher options]
-   (.getAllByPlaceholderText screen matcher (clj->js options))))
+   (vec (.getAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn get-all-by-text
   "0 Matches  - Throw error
@@ -368,9 +368,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
-   (.getAllByText screen matcher))
+   (vec (.getAllByText screen matcher)))
   ([matcher options]
-   (.getAllByText screen matcher (clj->js options))))
+   (vec (.getAllByText screen matcher (clj->js options)))))
 
 (defn get-all-by-display-value
   "0 Matches  - Throw error
@@ -381,9 +381,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
-   (.getAllByDisplayValue screen matcher))
+   (vec (.getAllByDisplayValue screen matcher)))
   ([matcher options]
-   (.getAllByDisplayValue screen matcher (clj->js options))))
+   (vec (.getAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn get-all-by-alt-text
   "0 Matches  - Throw error
@@ -394,9 +394,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
-   (.getAllByAltText screen matcher))
+   (vec (.getAllByAltText screen matcher)))
   ([matcher options]
-   (.getAllByAltText screen matcher (clj->js options))))
+   (vec (.getAllByAltText screen matcher (clj->js options)))))
 
 (defn get-all-by-title
   "0 Matches  - Throw error
@@ -407,9 +407,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
-   (.getAllByTitle screen matcher))
+   (vec (.getAllByTitle screen matcher)))
   ([matcher options]
-   (.getAllByTitle screen matcher (clj->js options))))
+   (vec (.getAllByTitle screen matcher (clj->js options)))))
 
 (defn get-all-by-test-id
   "0 Matches  - Throw error
@@ -420,9 +420,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
-   (.getAllByTestId screen matcher))
+   (vec (.getAllByTestId screen matcher)))
   ([matcher options]
-   (.getAllByTestId screen matcher (clj->js options))))
+   (vec (.getAllByTestId screen matcher (clj->js options)))))
 
 (defn query-all-by-role
   "0 Matches  - Return []
@@ -433,9 +433,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
-   (.queryAllByRole screen matcher))
+   (vec (.queryAllByRole screen matcher)))
   ([matcher options]
-   (.queryAllByRole screen matcher (clj->js options))))
+   (vec (.queryAllByRole screen matcher (clj->js options)))))
 
 (defn query-all-by-label-text
   "0 Matches  - Return []
@@ -446,9 +446,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
-   (.queryAllByLabelText screen matcher))
+   (vec (.queryAllByLabelText screen matcher)))
   ([matcher options]
-   (.queryAllByLabelText screen matcher (clj->js options))))
+   (vec (.queryAllByLabelText screen matcher (clj->js options)))))
 
 (defn query-all-by-placeholder-text
   "0 Matches  - Return []
@@ -459,9 +459,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
-   (.queryAllByPlaceholderText screen matcher))
+   (vec (.queryAllByPlaceholderText screen matcher)))
   ([matcher options]
-   (.queryAllByPlaceholderText screen matcher (clj->js options))))
+   (vec (.queryAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn query-all-by-text
   "0 Matches  - Return []
@@ -472,9 +472,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
-   (.queryAllByText screen matcher))
+   (vec (.queryAllByText screen matcher)))
   ([matcher options]
-   (.queryAllByText screen matcher (clj->js options))))
+   (vec (.queryAllByText screen matcher (clj->js options)))))
 
 (defn query-all-by-display-value
   "0 Matches  - Return []
@@ -485,9 +485,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
-   (.queryAllByDisplayValue screen matcher))
+   (vec (.queryAllByDisplayValue screen matcher)))
   ([matcher options]
-   (.queryAllByDisplayValue screen matcher (clj->js options))))
+   (vec (.queryAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn query-all-by-alt-text
   "0 Matches  - Return []
@@ -498,9 +498,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
-   (.queryAllByAltText screen matcher))
+   (vec (.queryAllByAltText screen matcher)))
   ([matcher options]
-   (.queryAllByAltText screen matcher (clj->js options))))
+   (vec (.queryAllByAltText screen matcher (clj->js options)))))
 
 (defn query-all-by-title
   "0 Matches  - Return []
@@ -511,9 +511,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
-   (.queryAllByTitle screen matcher))
+   (vec (.queryAllByTitle screen matcher)))
   ([matcher options]
-   (.queryAllByTitle screen matcher (clj->js options))))
+   (vec (.queryAllByTitle screen matcher (clj->js options)))))
 
 (defn query-all-by-test-id
   "0 Matches  - Return []
@@ -524,9 +524,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
-   (.queryAllByTestId screen matcher))
+   (vec (.queryAllByTestId screen matcher)))
   ([matcher options]
-   (.queryAllByTestId screen matcher (clj->js options))))
+   (vec (.queryAllByTestId screen matcher (clj->js options)))))
 
 (defn find-all-by-role
   "0 Matches  - Return []
@@ -537,9 +537,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
   ([matcher]
-   (.findAllByRole screen matcher))
+   (vec (.findAllByRole screen matcher)))
   ([matcher options]
-   (.findAllByRole screen matcher (clj->js options))))
+   (vec (.findAllByRole screen matcher (clj->js options)))))
 
 (defn find-all-by-label-text
   "0 Matches  - Return []
@@ -550,9 +550,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
   ([matcher]
-   (.findAllByLabelText screen matcher))
+   (vec (.findAllByLabelText screen matcher)))
   ([matcher options]
-   (.findAllByLabelText screen matcher (clj->js options))))
+   (vec (.findAllByLabelText screen matcher (clj->js options)))))
 
 (defn find-all-by-placeholder-text
   "0 Matches  - Return []
@@ -563,9 +563,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
   ([matcher]
-   (.findAllByPlaceholderText screen matcher))
+   (vec (.findAllByPlaceholderText screen matcher)))
   ([matcher options]
-   (.findAllByPlaceholderText screen matcher (clj->js options))))
+   (vec (.findAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn find-all-by-text
   "0 Matches  - Return []
@@ -576,9 +576,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
   ([matcher]
-   (.findAllByText screen matcher))
+   (vec (.findAllByText screen matcher)))
   ([matcher options]
-   (.findAllByText screen matcher (clj->js options))))
+   (vec (.findAllByText screen matcher (clj->js options)))))
 
 (defn find-all-by-display-value
   "0 Matches  - Return []
@@ -589,9 +589,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
   ([matcher]
-   (.findAllByDisplayValue screen matcher))
+   (vec (.findAllByDisplayValue screen matcher)))
   ([matcher options]
-   (.findAllByDisplayValue screen matcher (clj->js options))))
+   (vec (.findAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn find-all-by-alt-text
   "0 Matches  - Return []
@@ -602,9 +602,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
   ([matcher]
-   (.findAllByAltText screen matcher))
+   (vec (.findAllByAltText screen matcher)))
   ([matcher options]
-   (.findAllByAltText screen matcher (clj->js options))))
+   (vec (.findAllByAltText screen matcher (clj->js options)))))
 
 (defn find-all-by-title
   "0 Matches  - Return []
@@ -615,9 +615,9 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
   ([matcher]
-   (.findAllByTitle screen matcher))
+   (vec (.findAllByTitle screen matcher)))
   ([matcher options]
-   (.findAllByTitle screen matcher (clj->js options))))
+   (vec (.findAllByTitle screen matcher (clj->js options)))))
 
 (defn find-all-by-test-id
   "0 Matches  - Return []
@@ -628,7 +628,7 @@
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
   ([matcher]
-   (.findAllByTestId screen matcher))
+   (vec (.findAllByTestId screen matcher)))
   ([matcher options]
-   (.findAllByTestId screen matcher (clj->js options))))
+   (vec (.findAllByTestId screen matcher (clj->js options)))))
 ;; End - Generated Code (Do not modify manually)
