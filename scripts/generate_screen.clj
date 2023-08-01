@@ -7,7 +7,8 @@
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
 
-(def fire-event-fn-template (slurp "query_fn.template.clj"))
+(def query-fn-template (slurp "query_fn.template.clj"))
+(def query-all-fn-template (slurp "query_all_fn.template.clj"))
 
 (defn insert-string [original string position]
   (str (subs original 0 position)
@@ -31,32 +32,38 @@
                     :docstring (str "0 Matches  - Throw error\n  "
                                     "1 Match    - Return element\n  "
                                     ">1 Matches - Throw error\n  "
-                                    "Retry (Async/Await) - No")}
+                                    "Retry (Async/Await) - No")
+                    :template query-fn-template}
                    {:type "queryBy"
                     :docstring (str "0 Matches  - Return null\n  "
                                     "1 Match    - Return element\n  "
                                     ">1 Matches - Throw error\n  "
-                                    "Retry (Async/Await) - No")}
+                                    "Retry (Async/Await) - No")
+                    :template query-fn-template}
                    {:type "findBy"
                     :docstring (str "0 Matches  - Throw error\n  "
                                     "1 Match    - Return element\n  "
                                     ">1 Matches - Throw error\n  "
-                                    "Retry (Async/Await) - Yes")}
+                                    "Retry (Async/Await) - Yes")
+                    :template query-fn-template}
                    {:type "getAllBy"
                     :docstring (str "0 Matches  - Throw error\n  "
                                     "1 Match    - Return array\n  "
                                     ">1 Matches - Return array\n  "
-                                    "Retry (Async/Await) - No")}
+                                    "Retry (Async/Await) - No")
+                    :template query-all-fn-template}
                    {:type "queryAllBy"
                     :docstring (str "0 Matches  - Return []\n  "
                                     "1 Match    - Return array\n  "
                                     ">1 Matches - Return array\n  "
-                                    "Retry (Async/Await) - No")}
+                                    "Retry (Async/Await) - No")
+                    :template query-all-fn-template}
                    {:type "findAllBy"
                     :docstring (str "0 Matches  - Return []\n  "
                                     "1 Match    - Throw error\n  "
                                     ">1 Matches - Return array\n  "
-                                    "Retry (Async/Await) - Yes")}]
+                                    "Retry (Async/Await) - Yes")
+                    :template query-all-fn-template}]
       query-values [{:by "Role"
                      :url "https://testing-library.com/docs/queries/byrole"}
                     {:by "LabelText"
@@ -80,9 +87,10 @@
                   {:cljs-fn-name cljs-fn-name
                    :js-fn-name js-fn-name
                    :url (:url query-value)
-                   :docstring (:docstring query-type)}))
+                   :docstring (:docstring query-type)
+                   :template (:template query-type)}))
       query-fns (->> queries
-                     (map #(-> fire-event-fn-template
+                     (map #(-> (:template %)
                                (str/replace "$cljs-fn-name" (:cljs-fn-name %))
                                (str/replace "$js-fn-name" (:js-fn-name %))
                                (str/replace "$docstring" (:docstring %))
