@@ -1,0 +1,6 @@
+{:paths ["script"]
+ :tasks
+ {generate:screen {:task (shell {:dir "scripts"} "bb" "generate_screen.clj")}
+  generate:fire-event {:task (shell {:dir "scripts"} "bb" "generate_fire_event.clj")}
+  release {:doc "Perform release"
+           :task (shell "lein release")}}}
