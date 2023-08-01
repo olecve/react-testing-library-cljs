@@ -16,7 +16,7 @@
         :target :node-test}}
  :dependencies [[reagent "0.8.1"]
                 [devcards "0.2.6"]
-                [org.clojars.olecve/react-testing-library-cljs "0.0.9"]]
+                [org.clojars.olecve/react-testing-library-cljs "0.0.10-SNAPSHOT"]]
  :dev-http {3000 "public"}
  :nrepl {:port 3333}
  :source-paths ["src"]}

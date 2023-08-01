@@ -2,18 +2,11 @@
   (:require [reagent.core :as r]
             [devcards.core :as dc :refer [defcard deftest]]
             [cljs.test :include-macros true :refer [is]]
-            ["@testing-library/react" :refer [render cleanup]]
+            ["@testing-library/react" :refer [cleanup]]
             [react-testing-library-cljs.reagent.fire-event :as fire-event]
+            [react-testing-library-cljs.reagent.render :refer [render!]]
             [react-testing-library-cljs.screen :as s]
             [app.hello :refer [click-counter hello]]))
-
-(defn testing-container
-  "The container that should be used to render testing-library react components.
-  We want to provide our own container so that the rendered devcards aren't used."
-  []
-  (let [app-div (js/document.createElement "div")]
-    (.setAttribute app-div "id" "testing-lib")
-    (js/document.body.appendChild app-div)))
 
 (defcard
   "This is a live interactive development environment using [Devcards](https://github.com/bhauman/devcards).
@@ -38,14 +31,14 @@
    Tests will be ran outside the browser when you run the test command.")
 
 (deftest hello-tests-card
-  (render (r/as-element [hello]) #js {:container (testing-container)})
-  (is (s/query-by-text #"Hello") "Should say 'Hello'")
+  (render! [hello])
+  (is (s/query-by-text #"Hello")
+      "Should say 'Hello'")
   (cleanup))
 
 (deftest click-counter-tests-card
-  (let [atom (r/atom 0)
-        element (r/as-element [click-counter atom])]
-    (render element #js {:container (testing-container)})
+  (let [atom (r/atom 0)]
+    (render! [click-counter atom])
     (is (s/query-by-text #"has value: 0")
         "shows the initial value as '0'")
 
