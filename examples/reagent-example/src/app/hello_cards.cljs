@@ -2,7 +2,9 @@
   (:require [reagent.core :as r]
             [devcards.core :as dc :refer [defcard deftest]]
             [cljs.test :include-macros true :refer [is]]
-            ["@testing-library/react" :refer [render cleanup fireEvent]]
+            ["@testing-library/react" :refer [render cleanup]]
+            [react-testing-library-cljs.reagent.fire-event :as fire-event]
+            [react-testing-library-cljs.screen :as s]
             [app.hello :refer [click-counter hello]]))
 
 (defn testing-container
@@ -16,7 +18,7 @@
 (defcard
   "This is a live interactive development environment using [Devcards](https://github.com/bhauman/devcards).
    You can use it to design, test, and think about parts of your app in isolation.
-   
+
    The two 'cards' below show the two components in this app.")
 
 (defcard hello-card
@@ -32,23 +34,26 @@
 (defcard
   "You can also add tests here and see their results. 
    Below are some tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
-   
+
    Tests will be ran outside the browser when you run the test command.")
 
 (deftest hello-tests-card
-  (let [tr (render (r/as-element [hello]) #js {:container (testing-container)})]
-    (is (.queryByText tr #"Hello") "Should say 'Hello'")
-    (cleanup)))
+  (render (r/as-element [hello]) #js {:container (testing-container)})
+  (is (s/query-by-text #"Hello") "Should say 'Hello'")
+  (cleanup))
 
 (deftest click-counter-tests-card
   (let [atom (r/atom 0)
-        element (r/as-element [click-counter atom])
-        tr (render element #js {:container (testing-container)})]
-    (is (.queryByText tr #"has value: 0") "Should show the initial value as '0'")
-    (.click fireEvent (.queryByText tr #"(?i)click me"))
-    (r/flush)
-    (is (.queryByText tr #"has value: 1") "Should show the value as '1' after click")
-    (.click fireEvent (.queryByText tr #"(?i)click me"))
-    (r/flush)
-    (is (.queryByText tr #"has value: 2") "Should show the value as '2' after two clicks")
+        element (r/as-element [click-counter atom])]
+    (render element #js {:container (testing-container)})
+    (is (s/query-by-text #"has value: 0")
+        "shows the initial value as '0'")
+
+    (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+    (is (s/query-by-text #"has value: 1")
+        "shows the value as '1' after click")
+
+    (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+    (is (s/query-by-text #"has value: 2")
+        "shows the value as '2' after two clicks")
     (cleanup)))

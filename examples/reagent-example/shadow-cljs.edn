@@ -15,7 +15,8 @@
         :output-to "out/e2e.js"
         :target :node-test}}
  :dependencies [[reagent "0.8.1"]
-                [devcards "0.2.6"]]
+                [devcards "0.2.6"]
+                [org.clojars.olecve/react-testing-library-cljs "0.0.9"]]
  :dev-http {3000 "public"}
  :nrepl {:port 3333}
  :source-paths ["src"]}
