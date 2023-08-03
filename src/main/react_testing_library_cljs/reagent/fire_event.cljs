@@ -1,4 +1,5 @@
 (ns react-testing-library-cljs.reagent.fire-event
+  (:refer-clojure :exclude [drop])
   (:require
    ["@testing-library/react" :refer [fireEvent]]
    [reagent.core :as r]))
