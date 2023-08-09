@@ -2,7 +2,7 @@
   (:require ["@testing-library/react" :as testing-library]
             [reagent.core :as r]))
 
-(def test-container-id "testing-container")
+(def test-container-id "test-container")
 
 (defn testing-container []
   (some-> (js/document.getElementById test-container-id) .remove)
