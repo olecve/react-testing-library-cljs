@@ -8,12 +8,15 @@
           :compiler-options {:devcards true}
           :output-dir "public/js"
           :target :browser}
-  :test {:ns-regexp "app.cards"
+  :test {:ns-regexp "^app.*-test$"
          :output-to "out/test.js"
          :target :node-test}
   :e2e {:ns-regexp "e2e.*"
         :output-to "out/e2e.js"
-        :target :node-test}}
+        :target :node-test}
+  :karma {:target :karma
+          :ns-regexp "^app.*-test$"
+          :output-to "target/karma-test.js"}}
  :dependencies [[reagent "0.8.1"]
                 [devcards "0.2.6"]
                 [org.clojars.olecve/react-testing-library-cljs "0.0.10-SNAPSHOT"]]
