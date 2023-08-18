@@ -41,11 +41,11 @@
     (render! [click-counter atom])
     (is (s/query-by-text #"has value: 0")
         "shows the initial value as '0'")
-
+    
     (fire-event/click (s/query-by-role "button" #"(?i)click me"))
     (is (s/query-by-text #"has value: 1")
         "shows the value as '1' after click")
-
+    
     (fire-event/click (s/query-by-role "button" #"(?i)click me"))
     (is (s/query-by-text #"has value: 2")
         "shows the value as '2' after two clicks")
