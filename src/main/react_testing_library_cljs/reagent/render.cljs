@@ -1,5 +1,5 @@
 (ns react-testing-library-cljs.reagent.render
-  (:require ["@testing-library/react" :as testing-library]
+  (:require ["@testing-library/react" :as testing-library :refer [cleanup]]
             [reagent.core :as r]))
 
 (def test-container-id "test-container")
@@ -13,5 +13,6 @@
 (defn render! [hiccup]
   (if (fn? hiccup)
     (render! (hiccup))
-    (testing-library/render (r/as-element hiccup)
-                            #js {:container (testing-container)})))
+    (do (cleanup)
+      (testing-library/render (r/as-element hiccup)
+                              #js {:container (testing-container)}) )))
