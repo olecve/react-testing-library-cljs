@@ -5,11 +5,13 @@
 (def test-container-id "test-container")
 
 (defn testing-container []
-  (some-> (js/document.getElementById test-container-id) .remove)
+  (set! (.-innerHTML js/document.body) "")
   (js/document.body.appendChild (doto (js/document.createElement "div")
                                   (.setAttribute "data-testid" test-container-id)
                                   (.setAttribute "id" test-container-id))))
 
 (defn render! [hiccup]
-  (testing-library/render (r/as-element hiccup)
-                          #js {:container (testing-container)}))
+  (if (fn? hiccup)
+    (render! (hiccup))
+    (testing-library/render (r/as-element hiccup)
+                            #js {:container (testing-container)})))
