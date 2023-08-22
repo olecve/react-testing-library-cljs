@@ -11,5 +11,7 @@
                                   (.setAttribute "id" test-container-id))))
 
 (defn render! [hiccup]
-  (testing-library/render (r/as-element hiccup)
-                          #js {:container (testing-container)}))
+  (if (fn? hiccup)
+    (render! (hiccup))
+    (testing-library/render (r/as-element hiccup)
+                            #js {:container (testing-container)})))
