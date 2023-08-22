@@ -4,7 +4,7 @@
             [react-testing-library-cljs.reagent.fire-event :as fire-event]
             [react-testing-library-cljs.reagent.render :refer [render!]]
             [react-testing-library-cljs.screen :as s]
-            [app.hello :refer [click-counter hello]]))
+            [app.hello :refer [click-counter click-counter-with-inner-state hello]]))
 
 (deftest when-rednering-hello-component
   (render! [hello])
@@ -16,11 +16,25 @@
     (render! [click-counter atom])
     (is (s/query-by-text #"has value: 0")
         "shows the initial value as '0'")
-    
+
     (fire-event/click (s/query-by-role "button" #"(?i)click me"))
     (is (s/query-by-text #"has value: 1")
         "shows the value as '1' after click")
-    
+
     (fire-event/click (s/query-by-role "button" #"(?i)click me"))
     (is (s/query-by-text #"has value: 2")
         "shows the value as '2' after two clicks")))
+
+(deftest click-counter-with-inner-state-test
+  (render! [click-counter-with-inner-state])
+
+  (is (s/query-by-text #"has value: 0")
+      "shows the initial value as '0'")
+
+  (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+  (is (s/query-by-text #"has value: 1")
+      "shows the value as '1' after click")
+
+  (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+  (is (s/query-by-text #"has value: 2")
+      "shows the value as '2' after two clicks"))
