@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Example: Reagent & Karma",
+			"path": "examples/reagent-karma-example"
+		}
+	],
+	"settings": {}
+}
