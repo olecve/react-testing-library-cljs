@@ -15,4 +15,5 @@
     (render! (hiccup))
     (do (cleanup)
         (testing-library/render (r/as-element hiccup)
-                                #js {:container (testing-container)}))))
+                                #js {:container (testing-container)})
+        (r/flush))))
