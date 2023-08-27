@@ -14,5 +14,5 @@
   (if (fn? hiccup)
     (render! (hiccup))
     (do (cleanup)
-      (testing-library/render (r/as-element hiccup)
-                              #js {:container (testing-container)}) )))
+        (testing-library/render (r/as-element hiccup)
+                                #js {:container (testing-container)}))))
