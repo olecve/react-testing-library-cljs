@@ -1,6 +1,7 @@
 (ns react-testing-library-cljs.reagent.render
-  (:require ["@testing-library/react" :as testing-library]
-            [reagent.core :as r]))
+  (:require
+    ["@testing-library/react" :as testing-library]
+    [reagent.core :as r]))
 
 (defn- valid-hiccup-component? [hiccup]
   (and (vector? hiccup)
