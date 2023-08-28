@@ -18,6 +18,7 @@
     (js/console.warn (str "Invalid hiccup markup provided: " hiccup ".\n"
                           "Hiccup markup should not be empty and should be a vector.")))
   (testing-library/cleanup)
-  (testing-library/render (r/as-element hiccup)
-                          #js {:container (testing-container)})
-  (r/flush))
+  (let [render-result (testing-library/render (r/as-element hiccup)
+                                              #js {:container (testing-container)})]
+    (r/flush)
+    render-result))
