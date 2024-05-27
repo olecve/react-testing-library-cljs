@@ -23,3 +23,11 @@
                                               #js {:container (testing-container)})]
     (r/flush)
     render-result))
+
+(defn act
+  "This is a light wrapper around the `react-dom/test-utils` act function.
+
+  To prepare a component for assertions, wrap the code rendering it and performing updates inside an act() call.
+  This makes your test run closer to how React works in the browser."
+  [callback]
+  (testing-library/act (callback)))
