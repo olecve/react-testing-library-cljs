@@ -30,4 +30,6 @@
   To prepare a component for assertions, wrap the code rendering it and performing updates inside an act() call.
   This makes your test run closer to how React works in the browser."
   [callback]
-  (testing-library/act callback))
+  (testing-library/act #(do
+                          (callback)
+                          (r/flush))))
