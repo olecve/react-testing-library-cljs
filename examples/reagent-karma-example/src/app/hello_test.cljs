@@ -6,7 +6,7 @@
             [react-testing-library-cljs.screen :as s]
             [app.hello :refer [click-counter click-counter-with-inner-state hello]]))
 
-(deftest when-rednering-hello-component
+(deftest when-rendering-hello-component
   (render! [hello])
   (is (s/query-by-text #"Hello")
       "renders hello"))
