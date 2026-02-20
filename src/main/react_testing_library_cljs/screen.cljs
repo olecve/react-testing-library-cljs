@@ -9,10 +9,15 @@
 ;; Refer to https://testing-library.com/docs/queries/about/ for more details about queries
 ;; Begin - Generated Code (Do not modify manually)
 (defn get-by-role
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
@@ -22,10 +27,15 @@
    (.getByRole screen matcher (clj->js options))))
 
 (defn get-by-label-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
@@ -35,10 +45,15 @@
    (.getByLabelText screen matcher (clj->js options))))
 
 (defn get-by-placeholder-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
@@ -48,10 +63,15 @@
    (.getByPlaceholderText screen matcher (clj->js options))))
 
 (defn get-by-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
@@ -61,10 +81,15 @@
    (.getByText screen matcher (clj->js options))))
 
 (defn get-by-display-value
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
@@ -74,10 +99,15 @@
    (.getByDisplayValue screen matcher (clj->js options))))
 
 (defn get-by-alt-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
@@ -87,10 +117,15 @@
    (.getByAltText screen matcher (clj->js options))))
 
 (defn get-by-title
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
@@ -100,10 +135,15 @@
    (.getByTitle screen matcher (clj->js options))))
 
 (defn get-by-test-id
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query.
+
+  Throws a descriptive error if no elements match or if more than one match is found.
+  Use `get-all-by` instead if more than one element is expected.
+
+  - No match: Throws error
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
@@ -113,10 +153,15 @@
    (.getByTestId screen matcher (clj->js options))))
 
 (defn query-by-role
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
@@ -126,10 +171,15 @@
    (.queryByRole screen matcher (clj->js options))))
 
 (defn query-by-label-text
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
@@ -139,10 +189,15 @@
    (.queryByLabelText screen matcher (clj->js options))))
 
 (defn query-by-placeholder-text
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
@@ -152,10 +207,15 @@
    (.queryByPlaceholderText screen matcher (clj->js options))))
 
 (defn query-by-text
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
@@ -165,10 +225,15 @@
    (.queryByText screen matcher (clj->js options))))
 
 (defn query-by-display-value
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
@@ -178,10 +243,15 @@
    (.queryByDisplayValue screen matcher (clj->js options))))
 
 (defn query-by-alt-text
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
@@ -191,10 +261,15 @@
    (.queryByAltText screen matcher (clj->js options))))
 
 (defn query-by-title
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
@@ -204,10 +279,15 @@
    (.queryByTitle screen matcher (clj->js options))))
 
 (defn query-by-test-id
-  "0 Matches  - Return null
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - No
+  "Returns the matching element for a query, or `nil` if no elements match.
+
+  Useful for asserting an element that is not present. Throws an error if more than one
+  match is found. Use `query-all-by` instead if this is OK.
+
+  - No match: Returns nil
+  - One match: Returns element
+  - Multiple match: Throws error
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
@@ -217,10 +297,16 @@
    (.queryByTestId screen matcher (clj->js options))))
 
 (defn find-by-role
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
@@ -230,10 +316,16 @@
    (.findByRole screen matcher (clj->js options))))
 
 (defn find-by-label-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
@@ -243,10 +335,16 @@
    (.findByLabelText screen matcher (clj->js options))))
 
 (defn find-by-placeholder-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
@@ -256,10 +354,16 @@
    (.findByPlaceholderText screen matcher (clj->js options))))
 
 (defn find-by-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
@@ -269,10 +373,16 @@
    (.findByText screen matcher (clj->js options))))
 
 (defn find-by-display-value
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
@@ -282,10 +392,16 @@
    (.findByDisplayValue screen matcher (clj->js options))))
 
 (defn find-by-alt-text
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
@@ -295,10 +411,16 @@
    (.findByAltText screen matcher (clj->js options))))
 
 (defn find-by-title
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
@@ -308,10 +430,16 @@
    (.findByTitle screen matcher (clj->js options))))
 
 (defn find-by-test-id
-  "0 Matches  - Throw error
-  1 Match    - Return element
-  >1 Matches - Throw error
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves when a matching element is found.
+
+  The promise is rejected if no element is found or if more than one element is found
+  after a default timeout of 1000ms. If you need to find more than one element, use
+  `find-all-by`. This is a combination of `get-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with element
+  - Multiple match: Rejects
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
@@ -321,10 +449,14 @@
    (.findByTestId screen matcher (clj->js options))))
 
 (defn get-all-by-role
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
@@ -334,10 +466,14 @@
    (vec (.getAllByRole screen matcher (clj->js options)))))
 
 (defn get-all-by-label-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
@@ -347,10 +483,14 @@
    (vec (.getAllByLabelText screen matcher (clj->js options)))))
 
 (defn get-all-by-placeholder-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
@@ -360,10 +500,14 @@
    (vec (.getAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn get-all-by-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
@@ -373,10 +517,14 @@
    (vec (.getAllByText screen matcher (clj->js options)))))
 
 (defn get-all-by-display-value
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
@@ -386,10 +534,14 @@
    (vec (.getAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn get-all-by-alt-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
@@ -399,10 +551,14 @@
    (vec (.getAllByAltText screen matcher (clj->js options)))))
 
 (defn get-all-by-title
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
@@ -412,10 +568,14 @@
    (vec (.getAllByTitle screen matcher (clj->js options)))))
 
 (defn get-all-by-test-id
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Throws an error if no elements match.
+
+  - No match: Throws error
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
@@ -425,10 +585,14 @@
    (vec (.getAllByTestId screen matcher (clj->js options)))))
 
 (defn query-all-by-role
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
@@ -438,10 +602,14 @@
    (vec (.queryAllByRole screen matcher (clj->js options)))))
 
 (defn query-all-by-label-text
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
@@ -451,10 +619,14 @@
    (vec (.queryAllByLabelText screen matcher (clj->js options)))))
 
 (defn query-all-by-placeholder-text
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
@@ -464,10 +636,14 @@
    (vec (.queryAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn query-all-by-text
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
@@ -477,10 +653,14 @@
    (vec (.queryAllByText screen matcher (clj->js options)))))
 
 (defn query-all-by-display-value
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
@@ -490,10 +670,14 @@
    (vec (.queryAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn query-all-by-alt-text
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
@@ -503,10 +687,14 @@
    (vec (.queryAllByAltText screen matcher (clj->js options)))))
 
 (defn query-all-by-title
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
@@ -516,10 +704,14 @@
    (vec (.queryAllByTitle screen matcher (clj->js options)))))
 
 (defn query-all-by-test-id
-  "0 Matches  - Return []
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - No
+  "Returns a vector of all matching elements for a query.
+
+  Returns an empty vector if no elements match.
+
+  - No match: Returns []
+  - One match: Returns vector
+  - Multiple match: Returns vector
+  - Async: No
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"
@@ -529,10 +721,15 @@
    (vec (.queryAllByTestId screen matcher (clj->js options)))))
 
 (defn find-all-by-role
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/byrole"
@@ -542,10 +739,15 @@
    (vec (.findAllByRole screen matcher (clj->js options)))))
 
 (defn find-all-by-label-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bylabeltext"
@@ -555,10 +757,15 @@
    (vec (.findAllByLabelText screen matcher (clj->js options)))))
 
 (defn find-all-by-placeholder-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/byplaceholdertext"
@@ -568,10 +775,15 @@
    (vec (.findAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn find-all-by-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytext"
@@ -581,10 +793,15 @@
    (vec (.findAllByText screen matcher (clj->js options)))))
 
 (defn find-all-by-display-value
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bydisplayvalue"
@@ -594,10 +811,15 @@
    (vec (.findAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn find-all-by-alt-text
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/byalttext"
@@ -607,10 +829,15 @@
    (vec (.findAllByAltText screen matcher (clj->js options)))))
 
 (defn find-all-by-title
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytitle"
@@ -620,10 +847,15 @@
    (vec (.findAllByTitle screen matcher (clj->js options)))))
 
 (defn find-all-by-test-id
-  "0 Matches  - Throw error
-  1 Match    - Return vector
-  >1 Matches - Return vector
-  Retry (Async/Await) - Yes
+  "Returns a promise which resolves to a vector of matching elements.
+
+  The promise is rejected if no elements are found after a default timeout of 1000ms.
+  This is a combination of `get-all-by` queries and `waitFor`.
+
+  - No match: Rejects
+  - One match: Resolves with vector
+  - Multiple match: Resolves with vector
+  - Async: Yes
 
   Original documentation:
    - https://testing-library.com/docs/queries/bytestid"

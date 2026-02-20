@@ -29,40 +29,57 @@
    string))
 
 (let [query-types [{:type "getBy"
-                    :docstring (str "0 Matches  - Throw error\n  "
-                                    "1 Match    - Return element\n  "
-                                    ">1 Matches - Throw error\n  "
-                                    "Retry (Async/Await) - No")
+                    :docstring (str "Returns the matching element for a query.\n\n  "
+                                    "Throws a descriptive error if no elements match or if more than one match is found.\n  "
+                                    "Use `get-all-by` instead if more than one element is expected.\n\n  "
+                                    "- No match: Throws error\n  "
+                                    "- One match: Returns element\n  "
+                                    "- Multiple match: Throws error\n  "
+                                    "- Async: No")
                     :template query-fn-template}
                    {:type "queryBy"
-                    :docstring (str "0 Matches  - Return null\n  "
-                                    "1 Match    - Return element\n  "
-                                    ">1 Matches - Throw error\n  "
-                                    "Retry (Async/Await) - No")
+                    :docstring (str "Returns the matching element for a query, or `nil` if no elements match.\n\n  "
+                                    "Useful for asserting an element that is not present. Throws an error if more than one\n  "
+                                    "match is found. Use `query-all-by` instead if this is OK.\n\n  "
+                                    "- No match: Returns nil\n  "
+                                    "- One match: Returns element\n  "
+                                    "- Multiple match: Throws error\n  "
+                                    "- Async: No")
                     :template query-fn-template}
                    {:type "findBy"
-                    :docstring (str "0 Matches  - Throw error\n  "
-                                    "1 Match    - Return element\n  "
-                                    ">1 Matches - Throw error\n  "
-                                    "Retry (Async/Await) - Yes")
+                    :docstring (str "Returns a promise which resolves when a matching element is found.\n\n  "
+                                    "The promise is rejected if no element is found or if more than one element is found\n  "
+                                    "after a default timeout of 1000ms. If you need to find more than one element, use\n  "
+                                    "`find-all-by`. This is a combination of `get-by` queries and `waitFor`.\n\n  "
+                                    "- No match: Rejects\n  "
+                                    "- One match: Resolves with element\n  "
+                                    "- Multiple match: Rejects\n  "
+                                    "- Async: Yes")
                     :template query-fn-template}
                    {:type "getAllBy"
-                    :docstring (str "0 Matches  - Throw error\n  "
-                                    "1 Match    - Return vector\n  "
-                                    ">1 Matches - Return vector\n  "
-                                    "Retry (Async/Await) - No")
+                    :docstring (str "Returns a vector of all matching elements for a query.\n\n  "
+                                    "Throws an error if no elements match.\n\n  "
+                                    "- No match: Throws error\n  "
+                                    "- One match: Returns vector\n  "
+                                    "- Multiple match: Returns vector\n  "
+                                    "- Async: No")
                     :template query-all-fn-template}
                    {:type "queryAllBy"
-                    :docstring (str "0 Matches  - Return []\n  "
-                                    "1 Match    - Return vector\n  "
-                                    ">1 Matches - Return vector\n  "
-                                    "Retry (Async/Await) - No")
+                    :docstring (str "Returns a vector of all matching elements for a query.\n\n  "
+                                    "Returns an empty vector if no elements match.\n\n  "
+                                    "- No match: Returns []\n  "
+                                    "- One match: Returns vector\n  "
+                                    "- Multiple match: Returns vector\n  "
+                                    "- Async: No")
                     :template query-all-fn-template}
                    {:type "findAllBy"
-                    :docstring (str "0 Matches  - Throw error\n  "
-                                    "1 Match    - Return vector\n  "
-                                    ">1 Matches - Return vector\n  "
-                                    "Retry (Async/Await) - Yes")
+                    :docstring (str "Returns a promise which resolves to a vector of matching elements.\n\n  "
+                                    "The promise is rejected if no elements are found after a default timeout of 1000ms.\n  "
+                                    "This is a combination of `get-all-by` queries and `waitFor`.\n\n  "
+                                    "- No match: Rejects\n  "
+                                    "- One match: Resolves with vector\n  "
+                                    "- Multiple match: Resolves with vector\n  "
+                                    "- Async: Yes")
                     :template query-all-fn-template}]
       query-values [{:by "Role"
                      :url "https://testing-library.com/docs/queries/byrole"}
