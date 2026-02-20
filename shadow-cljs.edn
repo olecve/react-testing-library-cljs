@@ -1,5 +1,4 @@
-{:dependencies [[reagent "0.8.1"]
-                [org.clojure/clojurescript "1.10.520"]]
+{:dependencies [[reagent "2.0.1"]]
  :source-paths ["src/main" "src/test"]
  :builds
  {:test {:target :node-test
