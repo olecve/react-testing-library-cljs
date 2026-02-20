@@ -12,11 +12,11 @@ For more information about the principles and concepts behind the testing librar
 
 - The `react-testing-library-cljs.screen` namespace provides a wrapper around the `react-testing-library`'s `screen` object, making it easier to interact with rendered components.
 
-- The `react-testing-library-cljs.fire-events` namespace simplifies firing events on rendered components, allowing you to simulate user interactions.
+- The `react-testing-library-cljs.fire-event` namespace simplifies firing events on rendered components, allowing you to simulate user interactions.
 
 ### Reagent
 
-- The `react-testing-library-cljs.reagent.fire-event` similar to the `react-testing-library-cljs.fire-events`, but calling `reagent.core/flush` after every event to trigger re-render.
+- The `react-testing-library-cljs.reagent.fire-event` similar to the `react-testing-library-cljs.fire-event`, but calling `reagent.core/flush` after every event to trigger re-render.
 
 - The `react-testing-library-cljs.reagent.render` provides helper function to render reagent components.
 
