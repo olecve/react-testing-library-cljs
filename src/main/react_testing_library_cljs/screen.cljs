@@ -529,8 +529,8 @@
    (vec (.queryAllByTestId screen matcher (clj->js options)))))
 
 (defn find-all-by-role
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -542,8 +542,8 @@
    (vec (.findAllByRole screen matcher (clj->js options)))))
 
 (defn find-all-by-label-text
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -555,8 +555,8 @@
    (vec (.findAllByLabelText screen matcher (clj->js options)))))
 
 (defn find-all-by-placeholder-text
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -568,8 +568,8 @@
    (vec (.findAllByPlaceholderText screen matcher (clj->js options)))))
 
 (defn find-all-by-text
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -581,8 +581,8 @@
    (vec (.findAllByText screen matcher (clj->js options)))))
 
 (defn find-all-by-display-value
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -594,8 +594,8 @@
    (vec (.findAllByDisplayValue screen matcher (clj->js options)))))
 
 (defn find-all-by-alt-text
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -607,8 +607,8 @@
    (vec (.findAllByAltText screen matcher (clj->js options)))))
 
 (defn find-all-by-title
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
@@ -620,8 +620,8 @@
    (vec (.findAllByTitle screen matcher (clj->js options)))))
 
 (defn find-all-by-test-id
-  "0 Matches  - Return []
-  1 Match    - Throw error
+  "0 Matches  - Throw error
+  1 Match    - Return vector
   >1 Matches - Return vector
   Retry (Async/Await) - Yes
 
