@@ -59,8 +59,8 @@
                                     "Retry (Async/Await) - No")
                     :template query-all-fn-template}
                    {:type "findAllBy"
-                    :docstring (str "0 Matches  - Return []\n  "
-                                    "1 Match    - Throw error\n  "
+                    :docstring (str "0 Matches  - Throw error\n  "
+                                    "1 Match    - Return vector\n  "
                                     ">1 Matches - Return vector\n  "
                                     "Retry (Async/Await) - Yes")
                     :template query-all-fn-template}]
