@@ -1,2 +1,8 @@
-{:lein true
- :dependencies []}
+{:dependencies [[reagent "0.8.1"]
+                [org.clojure/clojurescript "1.10.520"]]
+ :source-paths ["src/main" "src/test"]
+ :builds
+ {:test {:target :node-test
+         :ns-regexp "^react-testing-library-cljs.*-test$"
+         :output-to "out/test.js"
+         :devtools {:preloads [react-testing-library-cljs.test-setup]}}}}
