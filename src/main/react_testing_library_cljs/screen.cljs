@@ -19,8 +19,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byrole"
+  See [getByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
    (.getByRole screen matcher))
   ([matcher options]
@@ -37,8 +36,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bylabeltext"
+  See [getByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
    (.getByLabelText screen matcher))
   ([matcher options]
@@ -55,8 +53,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byplaceholdertext"
+  See [getByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
    (.getByPlaceholderText screen matcher))
   ([matcher options]
@@ -73,8 +70,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytext"
+  See [getByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
    (.getByText screen matcher))
   ([matcher options]
@@ -91,8 +87,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bydisplayvalue"
+  See [getByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
    (.getByDisplayValue screen matcher))
   ([matcher options]
@@ -109,8 +104,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byalttext"
+  See [getByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
    (.getByAltText screen matcher))
   ([matcher options]
@@ -127,8 +121,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytitle"
+  See [getByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
    (.getByTitle screen matcher))
   ([matcher options]
@@ -145,8 +138,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytestid"
+  See [getByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
    (.getByTestId screen matcher))
   ([matcher options]
@@ -163,8 +155,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byrole"
+  See [queryByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
    (.queryByRole screen matcher))
   ([matcher options]
@@ -181,8 +172,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bylabeltext"
+  See [queryByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
    (.queryByLabelText screen matcher))
   ([matcher options]
@@ -199,8 +189,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byplaceholdertext"
+  See [queryByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
    (.queryByPlaceholderText screen matcher))
   ([matcher options]
@@ -217,8 +206,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytext"
+  See [queryByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
    (.queryByText screen matcher))
   ([matcher options]
@@ -235,8 +223,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bydisplayvalue"
+  See [queryByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
    (.queryByDisplayValue screen matcher))
   ([matcher options]
@@ -253,8 +240,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byalttext"
+  See [queryByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
    (.queryByAltText screen matcher))
   ([matcher options]
@@ -271,8 +257,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytitle"
+  See [queryByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
    (.queryByTitle screen matcher))
   ([matcher options]
@@ -289,8 +274,7 @@
   - Multiple match: Throws error
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytestid"
+  See [queryByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
    (.queryByTestId screen matcher))
   ([matcher options]
@@ -308,8 +292,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byrole"
+  See [findByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
    (.findByRole screen matcher))
   ([matcher options]
@@ -327,8 +310,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bylabeltext"
+  See [findByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
    (.findByLabelText screen matcher))
   ([matcher options]
@@ -346,8 +328,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byplaceholdertext"
+  See [findByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
    (.findByPlaceholderText screen matcher))
   ([matcher options]
@@ -365,8 +346,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytext"
+  See [findByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
    (.findByText screen matcher))
   ([matcher options]
@@ -384,8 +364,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bydisplayvalue"
+  See [findByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
    (.findByDisplayValue screen matcher))
   ([matcher options]
@@ -403,8 +382,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byalttext"
+  See [findByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
    (.findByAltText screen matcher))
   ([matcher options]
@@ -422,8 +400,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytitle"
+  See [findByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
    (.findByTitle screen matcher))
   ([matcher options]
@@ -441,8 +418,7 @@
   - Multiple match: Rejects
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytestid"
+  See [findByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
    (.findByTestId screen matcher))
   ([matcher options]
@@ -458,8 +434,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byrole"
+  See [getAllByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
    (vec (.getAllByRole screen matcher)))
   ([matcher options]
@@ -475,8 +450,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bylabeltext"
+  See [getAllByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
    (vec (.getAllByLabelText screen matcher)))
   ([matcher options]
@@ -492,8 +466,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byplaceholdertext"
+  See [getAllByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
    (vec (.getAllByPlaceholderText screen matcher)))
   ([matcher options]
@@ -509,8 +482,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytext"
+  See [getAllByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
    (vec (.getAllByText screen matcher)))
   ([matcher options]
@@ -526,8 +498,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bydisplayvalue"
+  See [getAllByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
    (vec (.getAllByDisplayValue screen matcher)))
   ([matcher options]
@@ -543,8 +514,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byalttext"
+  See [getAllByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
    (vec (.getAllByAltText screen matcher)))
   ([matcher options]
@@ -560,8 +530,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytitle"
+  See [getAllByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
    (vec (.getAllByTitle screen matcher)))
   ([matcher options]
@@ -577,8 +546,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytestid"
+  See [getAllByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
    (vec (.getAllByTestId screen matcher)))
   ([matcher options]
@@ -594,8 +562,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byrole"
+  See [queryAllByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
    (vec (.queryAllByRole screen matcher)))
   ([matcher options]
@@ -611,8 +578,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bylabeltext"
+  See [queryAllByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
    (vec (.queryAllByLabelText screen matcher)))
   ([matcher options]
@@ -628,8 +594,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byplaceholdertext"
+  See [queryAllByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
    (vec (.queryAllByPlaceholderText screen matcher)))
   ([matcher options]
@@ -645,8 +610,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytext"
+  See [queryAllByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
    (vec (.queryAllByText screen matcher)))
   ([matcher options]
@@ -662,8 +626,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bydisplayvalue"
+  See [queryAllByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
    (vec (.queryAllByDisplayValue screen matcher)))
   ([matcher options]
@@ -679,8 +642,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byalttext"
+  See [queryAllByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
    (vec (.queryAllByAltText screen matcher)))
   ([matcher options]
@@ -696,8 +658,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytitle"
+  See [queryAllByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
    (vec (.queryAllByTitle screen matcher)))
   ([matcher options]
@@ -713,8 +674,7 @@
   - Multiple match: Returns vector
   - Async: No
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytestid"
+  See [queryAllByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
    (vec (.queryAllByTestId screen matcher)))
   ([matcher options]
@@ -731,8 +691,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byrole"
+  See [findAllByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
    (vec (.findAllByRole screen matcher)))
   ([matcher options]
@@ -749,8 +708,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bylabeltext"
+  See [findAllByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
    (vec (.findAllByLabelText screen matcher)))
   ([matcher options]
@@ -767,8 +725,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byplaceholdertext"
+  See [findAllByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
    (vec (.findAllByPlaceholderText screen matcher)))
   ([matcher options]
@@ -785,8 +742,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytext"
+  See [findAllByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
    (vec (.findAllByText screen matcher)))
   ([matcher options]
@@ -803,8 +759,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bydisplayvalue"
+  See [findAllByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
    (vec (.findAllByDisplayValue screen matcher)))
   ([matcher options]
@@ -821,8 +776,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/byalttext"
+  See [findAllByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
    (vec (.findAllByAltText screen matcher)))
   ([matcher options]
@@ -839,8 +793,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytitle"
+  See [findAllByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
    (vec (.findAllByTitle screen matcher)))
   ([matcher options]
@@ -857,8 +810,7 @@
   - Multiple match: Resolves with vector
   - Async: Yes
 
-  Original documentation:
-   - https://testing-library.com/docs/queries/bytestid"
+  See [findAllByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
    (vec (.findAllByTestId screen matcher)))
   ([matcher options]
