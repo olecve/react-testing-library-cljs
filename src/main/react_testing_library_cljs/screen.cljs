@@ -1,6 +1,6 @@
 (ns react-testing-library-cljs.screen
   (:require
-    ["@testing-library/react" :refer [screen]]))
+   ["@testing-library/react" :refer [screen]]))
 
 (defn debug
   ([] (.debug screen))
@@ -815,4 +815,5 @@
    (vec (.findAllByTestId screen matcher)))
   ([matcher options]
    (vec (.findAllByTestId screen matcher (clj->js options)))))
+
 ;; End - Generated Code (Do not modify manually)

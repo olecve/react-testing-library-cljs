@@ -1,5 +1,6 @@
 {:rules
- {:functions {:enabled? false}
+ {:indentation {:list-indent 1}
+  :functions {:enabled? false}
   :whitespace {:remove-surrounding? true
                :remove-trailing? true
                :insert-missing? true}
