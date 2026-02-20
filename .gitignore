@@ -36,6 +36,7 @@
 /out
 /.clj-kondo
 /.lsp
+/.shadow-cljs
 pom.xml
 *.jar
 *.class
