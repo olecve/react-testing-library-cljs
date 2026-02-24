@@ -27,13 +27,13 @@ Add the library to your project:
 **deps.edn**
 
 ```clojure
-org.clojars.olecve/react-testing-library-cljs {:mvn/version "0.0.15"}
+org.clojars.olecve/react-testing-library-cljs {:mvn/version "0.0.16"}
 ```
 
 **Leiningen**
 
 ```clojure
-[org.clojars.olecve/react-testing-library-cljs "0.0.15"]
+[org.clojars.olecve/react-testing-library-cljs "0.0.16"]
 ```
 
 Install the npm dependency:
