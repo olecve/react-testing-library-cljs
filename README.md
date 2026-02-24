@@ -133,6 +133,23 @@ npx shadow-cljs compile test && node --require global-jsdom/register out/test.js
                  (done))))))
 ```
 
+## Release
+
+Prerequisites:
+
+- GPG configured ([lein help gpg](https://github.com/technomancy/leiningen/blob/stable/doc/GPG.md))
+- Clojars credentials in `~/.lein/profiles.clj`:
+
+```clojure
+{:auth {:repository-auth {#"clojars" {:username "USERNAME" :password "CLOJARS_TOKEN"}}}}
+```
+
+Run:
+
+```bash
+bb release
+```
+
 ## LICENSE
 
 [MIT](LICENSE)
