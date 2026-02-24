@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "yarn clean && shadow-cljs release app",
+    "build": "npm run clean && shadow-cljs release app",
     "cards": "shadow-cljs watch cards",
     "clean": "rimraf public/js",
     "e2e": "shadow-cljs compile e2e && node out/e2e.js",
@@ -32,7 +32,7 @@
     "react-dom": "~16.8.0",
     "sort-package-json": "2.5.1"
   },
-  "resolutions": {
+  "overrides": {
     "minimatch": "^3.1.3"
   },
   "devDependencies": {
