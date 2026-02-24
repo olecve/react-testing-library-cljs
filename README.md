@@ -1,6 +1,6 @@
-[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.olecve/react-testing-library-cljs.svg)](https://clojars.org/org.clojars.olecve/react-testing-library-cljs)
-
 # react-testing-library-cljs
+
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.olecve/react-testing-library-cljs.svg)](https://clojars.org/org.clojars.olecve/react-testing-library-cljs)
 
 The `react-testing-library-cljs` library provides a ClojureScript functions for the [react-testing-library](https://github.com/testing-library/react-testing-library) to simplify interop.
 
@@ -24,13 +24,13 @@ For more information about the principles and concepts behind the testing librar
 
 Add the library to your project:
 
-**deps.edn**
+### deps.edn
 
 ```clojure
 org.clojars.olecve/react-testing-library-cljs {:mvn/version "0.0.16"}
 ```
 
-**Leiningen**
+### Leiningen
 
 ```clojure
 [org.clojars.olecve/react-testing-library-cljs "0.0.16"]
@@ -42,7 +42,9 @@ Install the npm dependency:
 npm install --save-dev @testing-library/react
 ```
 
-**shadow-cljs config** — add a `:node-test` build target:
+### shadow-cljs config
+
+Add a `:node-test` build target:
 
 ```clojure
 ;; shadow-cljs.edn
