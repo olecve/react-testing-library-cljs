@@ -815,5 +815,4 @@
    (vec (.findAllByTestId screen matcher)))
   ([matcher options]
    (vec (.findAllByTestId screen matcher (clj->js options)))))
-
 ;; End - Generated Code (Do not modify manually)

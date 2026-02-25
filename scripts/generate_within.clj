@@ -2,6 +2,8 @@
 
 (require '[clojure.string :as str])
 
+(load-file "common.clj")
+
 (def within-source-file "../src/main/react_testing_library_cljs/within.cljs")
 
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
@@ -9,24 +11,6 @@
 
 (def query-fn-template (slurp "within_query_fn.template.clj"))
 (def query-all-fn-template (slurp "within_query_all_fn.template.clj"))
-
-(defn insert-string [original string position]
-  (str (subs original 0 position)
-       string
-       (subs original position)))
-
-(defn remove-string-between [string begin end]
-  (str (subs string 0 begin)
-       (subs string end)))
-
-(defn camel-case->kebab-case [string]
-  (reduce
-   (fn [result char]
-     (if (= (str char) (str/upper-case char))
-       (str result "-" (str/lower-case char))
-       (str result char)))
-   ""
-   string))
 
 (let [query-types [{:type "getBy"
                     :docstring (str "Returns the matching element scoped to `element` for a query.\n\n  "
