@@ -14,6 +14,8 @@ For more information about the principles and concepts behind the testing librar
 
 - The `react-testing-library-cljs.fire-event` namespace simplifies firing events on rendered components, allowing you to simulate user interactions.
 
+- The `react-testing-library-cljs.within` namespace scopes queries to a specific element, useful when multiple similar elements exist in the DOM.
+
 ### Reagent
 
 - The `react-testing-library-cljs.reagent.fire-event` similar to the `react-testing-library-cljs.fire-event`, but calling `reagent.core/flush` after every event to trigger re-render.
@@ -74,7 +76,7 @@ npx shadow-cljs compile test && node --require global-jsdom/register out/test.js
 
 (deftest renders-greeting
   (render/render! [greeting])
-  (is (screen/get-by-text "Hello, world!")))
+  (is (some? (screen/get-by-text "Hello, world!"))))
 ```
 
 ### Firing events
@@ -116,6 +118,29 @@ npx shadow-cljs compile test && node --require global-jsdom/register out/test.js
     (is (= 1 (count @calls)))))
 ```
 
+### Scoped queries with `within`
+
+Use `within` to scope queries to a subtree — useful when the same elements appear in multiple places:
+
+```clojure
+(ns my-app.within-test
+  (:require [cljs.test :refer [deftest is]]
+            [react-testing-library-cljs.reagent.render :as render]
+            [react-testing-library-cljs.screen :as screen]
+            [react-testing-library-cljs.within :as within]))
+
+(defn user-list []
+  [:ul
+   [:li {:role "listitem"} [:span "Alice"] [:button "Delete"]]
+   [:li {:role "listitem"} [:span "Bob"]   [:button "Delete"]]])
+
+(deftest deletes-correct-user
+  (render/render! [user-list])
+  (let [alice-item (first (screen/get-all-by-role "listitem"))]
+    (is (some? (within/get-by-text alice-item "Alice")))
+    (is (nil? (within/query-by-text alice-item "Bob")))))
+```
+
 ### Async queries
 
 `find-by-*` queries return a promise that resolves when a matching element appears (useful for async updates):
@@ -131,7 +156,7 @@ npx shadow-cljs compile test && node --require global-jsdom/register out/test.js
     (render/render! [my-async-component])
     (-> (screen/find-by-text "Loaded!")
         (.then (fn [element]
-                 (is element)
+                 (is (some? element))
                  (done))))))
 ```
 
