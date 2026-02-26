@@ -2,6 +2,8 @@
 
 (require '[clojure.string :as str])
 
+(load-file "common.clj")
+
 (def event-types
   ["copy"
    "cut"
@@ -89,24 +91,6 @@
 
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
-
-(defn insert-string [original string position]
-  (str (subs original 0 position)
-       string
-       (subs original position)))
-
-(defn remove-string-between [string begin end]
-  (str (subs string 0 begin)
-       (subs string end)))
-
-(defn camel-case->kebab-case [string]
-  (reduce
-   (fn [result char]
-     (if (= (str char) (str/upper-case char))
-       (str result "-" (str/lower-case char))
-       (str result char)))
-   ""
-   string))
 
 (let [fire-event-source-file "../src/main/react_testing_library_cljs/fire_event.cljs"
       fire-event-fn-template (slurp "fire_event_fn.template.clj")

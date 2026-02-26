@@ -4,16 +4,16 @@
 
 (load-file "common.clj")
 
-(def screen-source-file "../src/main/react_testing_library_cljs/screen.cljs")
+(def within-source-file "../src/main/react_testing_library_cljs/within.cljs")
 
 (def begin-marker ";; Begin - Generated Code (Do not modify manually)\n")
 (def end-marker ";; End - Generated Code (Do not modify manually)\n")
 
-(def query-fn-template (slurp "query_fn.template.clj"))
-(def query-all-fn-template (slurp "query_all_fn.template.clj"))
+(def query-fn-template (slurp "within_query_fn.template.clj"))
+(def query-all-fn-template (slurp "within_query_all_fn.template.clj"))
 
 (let [query-types [{:type "getBy"
-                    :docstring (str "Returns the matching element for a query.\n\n  "
+                    :docstring (str "Returns the matching element scoped to `element` for a query.\n\n  "
                                     "Throws a descriptive error if no elements match or if more than one match is found.\n  "
                                     "Use `get-all-by` instead if more than one element is expected.\n\n  "
                                     "- No match: Throws error\n  "
@@ -22,7 +22,7 @@
                                     "- Async: No")
                     :template query-fn-template}
                    {:type "queryBy"
-                    :docstring (str "Returns the matching element for a query, or `nil` if no elements match.\n\n  "
+                    :docstring (str "Returns the matching element scoped to `element` for a query, or `nil` if no elements match.\n\n  "
                                     "Useful for asserting an element that is not present. Throws an error if more than one\n  "
                                     "match is found. Use `query-all-by` instead if this is OK.\n\n  "
                                     "- No match: Returns nil\n  "
@@ -31,7 +31,7 @@
                                     "- Async: No")
                     :template query-fn-template}
                    {:type "findBy"
-                    :docstring (str "Returns a promise which resolves when a matching element is found.\n\n  "
+                    :docstring (str "Returns a promise which resolves when a matching element is found within `element`.\n\n  "
                                     "The promise is rejected if no element is found or if more than one element is found\n  "
                                     "after a default timeout of 1000ms. If you need to find more than one element, use\n  "
                                     "`find-all-by`. This is a combination of `get-by` queries and `waitFor`.\n\n  "
@@ -41,7 +41,7 @@
                                     "- Async: Yes")
                     :template query-fn-template}
                    {:type "getAllBy"
-                    :docstring (str "Returns a vector of all matching elements for a query.\n\n  "
+                    :docstring (str "Returns a vector of all matching elements scoped to `element` for a query.\n\n  "
                                     "Throws an error if no elements match.\n\n  "
                                     "- No match: Throws error\n  "
                                     "- One match: Returns vector\n  "
@@ -49,7 +49,7 @@
                                     "- Async: No")
                     :template query-all-fn-template}
                    {:type "queryAllBy"
-                    :docstring (str "Returns a vector of all matching elements for a query.\n\n  "
+                    :docstring (str "Returns a vector of all matching elements scoped to `element` for a query.\n\n  "
                                     "Returns an empty vector if no elements match.\n\n  "
                                     "- No match: Returns []\n  "
                                     "- One match: Returns vector\n  "
@@ -57,7 +57,7 @@
                                     "- Async: No")
                     :template query-all-fn-template}
                    {:type "findAllBy"
-                    :docstring (str "Returns a promise which resolves to a vector of matching elements.\n\n  "
+                    :docstring (str "Returns a promise which resolves to a vector of matching elements scoped to `element`.\n\n  "
                                     "The promise is rejected if no elements are found after a default timeout of 1000ms.\n  "
                                     "This is a combination of `get-all-by` queries and `waitFor`.\n\n  "
                                     "- No match: Rejects\n  "
@@ -97,10 +97,10 @@
                                (str/replace "$docstring" (:docstring %))
                                (str/replace "$url" (:url %))))
                      (str/join "\n"))
-      source-file (slurp screen-source-file)
+      source-file (slurp within-source-file)
       begin-position (+ (str/index-of source-file begin-marker) (count begin-marker))
       end-position (str/index-of source-file end-marker)
       source-file-updated (-> source-file
                               (remove-string-between begin-position end-position)
                               (insert-string query-fns begin-position))]
-  (spit screen-source-file source-file-updated))
+  (spit within-source-file source-file-updated))
