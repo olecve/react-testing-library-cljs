@@ -120,7 +120,8 @@ npx shadow-cljs compile test && node --require global-jsdom/register out/test.js
 
 ### Scoped queries with `within`
 
-Use `within` to scope queries to a subtree — useful when the same elements appear in multiple places:
+Use `within` to scope queries to a subtree — useful when the same elements appear in multiple places.
+In the example below, scoping to the dialog avoids ambiguity with other "Delete" buttons on the page:
 
 ```clojure
 (ns my-app.within-test
@@ -129,16 +130,21 @@ Use `within` to scope queries to a subtree — useful when the same elements app
             [react-testing-library-cljs.screen :as screen]
             [react-testing-library-cljs.within :as within]))
 
-(defn user-list []
-  [:ul
-   [:li {:role "listitem"} [:span "Alice"] [:button "Delete"]]
-   [:li {:role "listitem"} [:span "Bob"]   [:button "Delete"]]])
+(defn page []
+  [:div
+   [:ul
+    [:li "Report Q4" [:button "Delete"]]
+    [:li "Report Q3" [:button "Delete"]]]
+   [:div {:role "dialog" :aria-label "Confirm deletion"}
+    [:p "Are you sure you want to delete this report?"]
+    [:button "Delete"]
+    [:button "Cancel"]]])
 
-(deftest deletes-correct-user
-  (render/render! [user-list])
-  (let [alice-item (first (screen/get-all-by-role "listitem"))]
-    (is (some? (within/get-by-text alice-item "Alice")))
-    (is (nil? (within/query-by-text alice-item "Bob")))))
+(deftest confirm-dialog-has-correct-actions
+  (render/render! [page])
+  (let [dialog (screen/get-by-role "dialog")]
+    (is (some? (within/get-by-role dialog "button" {:name "Delete"})))
+    (is (some? (within/get-by-role dialog "button" {:name "Cancel"})))))
 ```
 
 ### Async queries
