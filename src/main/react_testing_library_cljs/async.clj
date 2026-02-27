@@ -14,7 +14,7 @@
   [name & body]
   `(cljs.test/deftest ~name
      (cljs.test/async done#
-       (-> (do ~@body)
+       (-> (promesa.core/do ~@body)
            (.then done#)
            (.catch (fn [err#]
                      (cljs.test/is (nil? err#) (.-message err#))
