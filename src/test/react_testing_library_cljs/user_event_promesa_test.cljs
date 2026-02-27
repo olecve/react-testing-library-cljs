@@ -18,7 +18,8 @@
                  #js {:onClick #(swap! clicks inc)}
                  "Click me"))
     (let [user (user-event/setup)]
-      (p/let [_ (user-event/click user (screen/get-by-role "button"))]
+      (p/do
+        (user-event/click user (screen/get-by-role "button"))
         (is (= 1 @clicks))))))
 
 (deftest-async type-test
@@ -28,7 +29,8 @@
                     :defaultValue ""}))
   (let [user (user-event/setup)
         input (screen/get-by-placeholder-text "type here")]
-    (p/let [_ (user-event/type user input "hello")]
+    (p/do
+      (user-event/type user input "hello")
       (is (= "hello" (.-value input))))))
 
 (deftest-async clear-test
@@ -38,7 +40,8 @@
                     :defaultValue "existing text"}))
   (let [user (user-event/setup)
         input (screen/get-by-placeholder-text "to clear")]
-    (p/let [_ (user-event/clear user input)]
+    (p/do
+      (user-event/clear user input)
       (is (= "" (.-value input))))))
 
 (deftest-async tab-test
@@ -50,7 +53,8 @@
         first-input (screen/get-by-placeholder-text "first")
         second-input (screen/get-by-placeholder-text "second")]
     (.focus first-input)
-    (p/let [_ (user-event/tab user)]
+    (p/do
+      (user-event/tab user)
       (is (= second-input (.-activeElement js/document))))))
 
 (deftest-async keyboard-test
@@ -63,7 +67,8 @@
                  (react/createElement "input" #js {:placeholder "press enter"})))
     (let [user (user-event/setup)]
       (.focus (screen/get-by-placeholder-text "press enter"))
-      (p/let [_ (user-event/keyboard user "{Enter}")]
+      (p/do
+        (user-event/keyboard user "{Enter}")
         (is (true? @submitted))))))
 
 (deftest-async select-options-test
@@ -74,5 +79,6 @@
                (react/createElement "option" #js {:value "b"} "Option B")))
   (let [user (user-event/setup)
         select (screen/get-by-role "combobox")]
-    (p/let [_ (user-event/select-options user select "Option A")]
+    (p/do
+      (user-event/select-options user select "Option A")
       (is (= "a" (.-value select))))))
