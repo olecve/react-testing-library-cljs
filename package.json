@@ -5,7 +5,7 @@
     "generate:fire-event": "cd scripts && bb ./generate_fire_event.clj",
     "watch": "npx shadow-cljs watch app",
     "release": "npx shadow-cljs release app",
-    "test": "npx shadow-cljs compile test && node --require global-jsdom/register out/test.js",
+    "test": "npx shadow-cljs compile test && node out/test.js",
     "test:watch": "npx shadow-cljs watch test --config-merge \"{:autorun true}\""
   },
   "devDependencies": {
