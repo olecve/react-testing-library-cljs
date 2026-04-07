@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.0.19
 
 - **Breaking:** Swap return order of `mocks/create` to `[handler calls reset!]`
 - Register global jsdom from `test-setup` namespace
