@@ -17,5 +17,9 @@
   "dependencies": {
     "@testing-library/react": "16.3.2",
     "@testing-library/user-event": "14.6.1"
+  },
+  "overrides": {
+    "ws@8": "^8.21.0",
+    "undici": "^7.28.0"
   }
 }
