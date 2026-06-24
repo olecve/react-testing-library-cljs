@@ -1,12 +1,13 @@
 (ns app.hello-cards
-  (:require ["@testing-library/react" :refer [cleanup]]
-            [app.hello :refer [click-counter hello]]
-            [cljs.test :include-macros true :refer [is]]
-            [devcards.core :as dc :refer [defcard deftest]]
-            [react-testing-library-cljs.reagent.fire-event :as fire-event]
-            [react-testing-library-cljs.reagent.render :refer [render!]]
-            [react-testing-library-cljs.screen :as s]
-            [reagent.core :as r]))
+  (:require
+   ["@testing-library/react" :refer [cleanup]]
+   [app.hello :refer [click-counter hello]]
+   [cljs.test :include-macros true :refer [is]]
+   [devcards.core :as dc :refer [defcard deftest]]
+   [react-testing-library-cljs.reagent.fire-event :as fire-event]
+   [react-testing-library-cljs.reagent.render :refer [render!]]
+   [react-testing-library-cljs.screen :as s]
+   [reagent.core :as r]))
 
 (defcard
   "This is a live interactive development environment using [Devcards](https://github.com/bhauman/devcards).

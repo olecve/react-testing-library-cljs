@@ -1,9 +1,10 @@
 (ns e2e.core
   "This namespace contains your e2e tests and is the entrypoint for 'yarn e2e'."
-  (:require ["http" :as http]
-            ["serve-handler" :as serve-handler]
-            ["taiko" :refer [openBrowser goto closeBrowser text diagnostics]]
-            [cljs.test :refer-macros [deftest is async use-fixtures]]))
+  (:require
+   ["http" :as http]
+   ["serve-handler" :as serve-handler]
+   ["taiko" :refer [openBrowser goto closeBrowser text diagnostics]]
+   [cljs.test :refer-macros [deftest is async use-fixtures]]))
 
 ; Serve public/ on a static server.
 (use-fixtures

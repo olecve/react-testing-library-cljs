@@ -1,5 +1,6 @@
 (ns app.hello
-  (:require [reagent.core :as r]))
+  (:require
+   [reagent.core :as r]))
 
 (defn click-counter [click-count]
   [:div

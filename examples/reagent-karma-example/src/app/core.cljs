@@ -1,7 +1,8 @@
 (ns app.core
   "This namespace contains your application and is the entrypoint for 'yarn start'."
-  (:require [app.hello :refer [hello]]
-            [reagent.core :as r]))
+  (:require
+   [app.hello :refer [hello]]
+   [reagent.core :as r]))
 
 (defn ^:dev/after-load render
   "Render the toplevel component for this app."

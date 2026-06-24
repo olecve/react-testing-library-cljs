@@ -1,10 +1,11 @@
 (ns app.hello-test
-  (:require [app.hello :refer [click-counter click-counter-with-inner-state hello]]
-            [cljs.test :refer-macros [deftest is]]
-            [react-testing-library-cljs.reagent.fire-event :as fire-event]
-            [react-testing-library-cljs.reagent.render :refer [render!]]
-            [react-testing-library-cljs.screen :as s]
-            [reagent.core :as r]))
+  (:require
+   [app.hello :refer [click-counter click-counter-with-inner-state hello]]
+   [cljs.test :refer-macros [deftest is]]
+   [react-testing-library-cljs.reagent.fire-event :as fire-event]
+   [react-testing-library-cljs.reagent.render :refer [render!]]
+   [react-testing-library-cljs.screen :as s]
+   [reagent.core :as r]))
 
 (deftest when-rendering-hello-component
   (render! [hello])
