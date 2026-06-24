@@ -6,10 +6,14 @@
     "watch": "npx shadow-cljs watch app",
     "release": "npx shadow-cljs release app",
     "test": "npx shadow-cljs compile test && node out/test.js",
-    "test:watch": "npx shadow-cljs watch test --config-merge \"{:autorun true}\""
+    "test:watch": "npx shadow-cljs watch test --config-merge \"{:autorun true}\"",
+    "fmt": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
+    "fmt:check": "prettier --check \"**/*.{clj,cljs,cljc,edn}\""
   },
   "devDependencies": {
     "global-jsdom": "^28.0.0",
+    "prettier": "^3.8.4",
+    "prettier-plugin-cljfmt": "^0.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "shadow-cljs": "3.3.6"

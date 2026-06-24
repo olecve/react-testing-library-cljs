@@ -1,0 +1,11 @@
+{:function-arguments-indentation :community
+ :indentation? true
+ :insert-missing-whitespace? true
+ :normalize-newlines-at-file-end? true
+ :remove-consecutive-blank-lines? true
+ :remove-multiple-non-indenting-spaces? true
+ :remove-surrounding-whitespace? true
+ :remove-trailing-whitespace? true
+ :sort-ns-references? true
+ :split-keypairs-over-multiple-lines? true
+ :extra-indents {async [[:inner 0]]}}
