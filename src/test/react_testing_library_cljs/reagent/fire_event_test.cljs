@@ -1,10 +1,10 @@
 (ns react-testing-library-cljs.reagent.fire-event-test
   (:require
    [cljs.test :refer [deftest is testing]]
-   [reagent.core :as r]
-   [react-testing-library-cljs.screen :as screen]
+   [react-testing-library-cljs.reagent.fire-event :as fire-event]
    [react-testing-library-cljs.reagent.render :refer [render! act]]
-   [react-testing-library-cljs.reagent.fire-event :as fire-event]))
+   [react-testing-library-cljs.screen :as screen]
+   [reagent.core :as r]))
 
 (deftest click-triggers-re-render
   (testing "clicking a button updates state visibly"

@@ -1,12 +1,12 @@
 (ns app.hello-cards
-  (:require [reagent.core :as r]
-            [devcards.core :as dc :refer [defcard deftest]]
+  (:require ["@testing-library/react" :refer [cleanup]]
+            [app.hello :refer [click-counter hello]]
             [cljs.test :include-macros true :refer [is]]
-            ["@testing-library/react" :refer [cleanup]]
+            [devcards.core :as dc :refer [defcard deftest]]
             [react-testing-library-cljs.reagent.fire-event :as fire-event]
             [react-testing-library-cljs.reagent.render :refer [render!]]
             [react-testing-library-cljs.screen :as s]
-            [app.hello :refer [click-counter hello]]))
+            [reagent.core :as r]))
 
 (defcard
   "This is a live interactive development environment using [Devcards](https://github.com/bhauman/devcards).
@@ -41,11 +41,11 @@
     (render! [click-counter atom])
     (is (s/query-by-text #"has value: 0")
         "shows the initial value as '0'")
-    
+
     (fire-event/click (s/query-by-role "button" #"(?i)click me"))
     (is (s/query-by-text #"has value: 1")
         "shows the value as '1' after click")
-    
+
     (fire-event/click (s/query-by-role "button" #"(?i)click me"))
     (is (s/query-by-text #"has value: 2")
         "shows the value as '2' after two clicks")

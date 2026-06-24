@@ -1,9 +1,9 @@
 (ns react-testing-library-cljs.reagent.render-test
   (:require
    [cljs.test :refer [deftest is testing]]
-   [reagent.core :as r]
+   [react-testing-library-cljs.reagent.render :refer [render! act]]
    [react-testing-library-cljs.screen :as screen]
-   [react-testing-library-cljs.reagent.render :refer [render! act]]))
+   [reagent.core :as r]))
 
 (deftest render!-test
   (testing "renders hiccup to the DOM"

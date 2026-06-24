@@ -1,20 +1,20 @@
 (ns react-testing-library-cljs.fire-event-test
   (:require
-   [cljs.test :refer [deftest is testing]]
    ["@testing-library/react" :as rtl]
    ["react" :as react]
-   [react-testing-library-cljs.screen :as screen]
-   [react-testing-library-cljs.fire-event :as fire-event]))
+   [cljs.test :refer [deftest is testing]]
+   [react-testing-library-cljs.fire-event :as fire-event]
+   [react-testing-library-cljs.screen :as screen]))
 
 (defn- counter-component []
   (let [state (react/useState 0)
         count (aget state 0)
         set-count (aget state 1)]
     (react/createElement "div" nil
-      (react/createElement "span" #js {:data-testid "count"} (str count))
-      (react/createElement "button"
-        #js {:onClick (fn [] (set-count (inc count)))}
-        "Increment"))))
+                         (react/createElement "span" #js {:data-testid "count"} (str count))
+                         (react/createElement "button"
+                                              #js {:onClick (fn [] (set-count (inc count)))}
+                                              "Increment"))))
 
 (deftest click-test
   (testing "click fires and updates state"

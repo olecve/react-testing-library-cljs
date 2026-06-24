@@ -1,8 +1,8 @@
 (ns react-testing-library-cljs.screen-test
   (:require
-   [cljs.test :refer [deftest is testing]]
    ["@testing-library/react" :as rtl]
    ["react" :as react]
+   [cljs.test :refer [deftest is testing]]
    [react-testing-library-cljs.screen :as screen]))
 
 (defn- render-el [element]
@@ -37,8 +37,8 @@
   (testing "returns a vector of matching elements"
     (rtl/cleanup)
     (render-el (react/createElement "div" nil
-                 (react/createElement "span" nil "Item")
-                 (react/createElement "span" nil "Item")))
+                                    (react/createElement "span" nil "Item")
+                                    (react/createElement "span" nil "Item")))
     (let [els (screen/get-all-by-text "Item")]
       (is (vector? els))
       (is (= 2 (count els))))))
