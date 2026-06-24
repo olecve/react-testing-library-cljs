@@ -6,8 +6,6 @@
    [app.hello-cards]
    [cljsjs.react]
    [cljsjs.react.dom]
-   ; devcards needs cljsjs.react and cljsjs.react.dom to be imported
-   ; separately for shadow-cljs to add shims.
    [devcards.core :refer [start-devcard-ui!]]))
 
 ; Set jsdom to mock a dom environment for node testing.
