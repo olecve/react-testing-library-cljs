@@ -1,0 +1,1 @@
+{:lint-as {react-testing-library-cljs.async/deftest-async clojure.test/deftest}}

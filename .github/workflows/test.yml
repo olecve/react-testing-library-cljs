@@ -21,6 +21,11 @@ jobs:
           node-version: 22
           cache: npm
 
+      - uses: DeLaGuardo/setup-clj-kondo@master
+        with:
+          version: "2026.05.25"
+
       - run: npm ci
       - run: npm run fmt:check
+      - run: npm run lint
       - run: npm test

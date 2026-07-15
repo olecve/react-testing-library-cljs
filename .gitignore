@@ -34,7 +34,8 @@
 /checkouts
 /dev-resources/public/js/*
 /out
-/.clj-kondo
+/.clj-kondo/.cache
+/.clj-kondo/imports
 /.lsp
 /.shadow-cljs
 pom.xml
