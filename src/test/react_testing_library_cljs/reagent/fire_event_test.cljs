@@ -29,3 +29,26 @@
       (is (= "" (.-textContent (screen/get-by-test-id "display"))))
       (act #(fire-event/change (screen/get-by-test-id "input") {:target {:value "hello"}}))
       (is (= "hello" (.-textContent (screen/get-by-test-id "display")))))))
+
+(deftest key-down-returns-default-prevented-boolean
+  (testing "returns true when nothing calls preventDefault (single arity)"
+    (let [component (fn [] [:input {:data-testid "plain"}])]
+      (render! [component])
+      (is (true? (fire-event/key-down (screen/get-by-test-id "plain"))))))
+
+  (testing "returns true when nothing calls preventDefault (options arity)"
+    (let [component (fn [] [:input {:data-testid "plain"}])]
+      (render! [component])
+      (is (true? (fire-event/key-down (screen/get-by-test-id "plain") {:key " "})))))
+
+  (testing "returns false when a handler calls preventDefault (single arity)"
+    (let [component (fn [] [:input {:data-testid "prevents"
+                                    :on-key-down #(.preventDefault %)}])]
+      (render! [component])
+      (is (false? (fire-event/key-down (screen/get-by-test-id "prevents"))))))
+
+  (testing "returns false when a handler calls preventDefault (options arity)"
+    (let [component (fn [] [:input {:data-testid "prevents"
+                                    :on-key-down #(.preventDefault %)}])]
+      (render! [component])
+      (is (false? (fire-event/key-down (screen/get-by-test-id "prevents") {:key " "}))))))

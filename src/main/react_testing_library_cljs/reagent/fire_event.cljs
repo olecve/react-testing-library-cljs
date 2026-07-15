@@ -8,665 +8,831 @@
 ;; Begin - Generated Code (Do not modify manually)
 (defn copy
   ([element]
-   (.copy fireEvent element)
-   (r/flush))
+   (let [result (.copy fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.copy fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.copy fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn cut
   ([element]
-   (.cut fireEvent element)
-   (r/flush))
+   (let [result (.cut fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.cut fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.cut fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn paste
   ([element]
-   (.paste fireEvent element)
-   (r/flush))
+   (let [result (.paste fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.paste fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.paste fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn composition-end
   ([element]
-   (.compositionEnd fireEvent element)
-   (r/flush))
+   (let [result (.compositionEnd fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.compositionEnd fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.compositionEnd fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn composition-start
   ([element]
-   (.compositionStart fireEvent element)
-   (r/flush))
+   (let [result (.compositionStart fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.compositionStart fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.compositionStart fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn composition-update
   ([element]
-   (.compositionUpdate fireEvent element)
-   (r/flush))
+   (let [result (.compositionUpdate fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.compositionUpdate fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.compositionUpdate fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn key-down
   ([element]
-   (.keyDown fireEvent element)
-   (r/flush))
+   (let [result (.keyDown fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.keyDown fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.keyDown fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn key-press
   ([element]
-   (.keyPress fireEvent element)
-   (r/flush))
+   (let [result (.keyPress fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.keyPress fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.keyPress fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn key-up
   ([element]
-   (.keyUp fireEvent element)
-   (r/flush))
+   (let [result (.keyUp fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.keyUp fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.keyUp fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn focus
   ([element]
-   (.focus fireEvent element)
-   (r/flush))
+   (let [result (.focus fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.focus fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.focus fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn blur
   ([element]
-   (.blur fireEvent element)
-   (r/flush))
+   (let [result (.blur fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.blur fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.blur fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn focus-in
   ([element]
-   (.focusIn fireEvent element)
-   (r/flush))
+   (let [result (.focusIn fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.focusIn fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.focusIn fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn focus-out
   ([element]
-   (.focusOut fireEvent element)
-   (r/flush))
+   (let [result (.focusOut fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.focusOut fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.focusOut fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn change
   ([element]
-   (.change fireEvent element)
-   (r/flush))
+   (let [result (.change fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.change fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.change fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn input
   ([element]
-   (.input fireEvent element)
-   (r/flush))
+   (let [result (.input fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.input fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.input fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn invalid
   ([element]
-   (.invalid fireEvent element)
-   (r/flush))
+   (let [result (.invalid fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.invalid fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.invalid fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn submit
   ([element]
-   (.submit fireEvent element)
-   (r/flush))
+   (let [result (.submit fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.submit fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.submit fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn reset
   ([element]
-   (.reset fireEvent element)
-   (r/flush))
+   (let [result (.reset fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.reset fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.reset fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn click
   ([element]
-   (.click fireEvent element)
-   (r/flush))
+   (let [result (.click fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.click fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.click fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn context-menu
   ([element]
-   (.contextMenu fireEvent element)
-   (r/flush))
+   (let [result (.contextMenu fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.contextMenu fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.contextMenu fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn dbl-click
   ([element]
-   (.dblClick fireEvent element)
-   (r/flush))
+   (let [result (.dblClick fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dblClick fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dblClick fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag
   ([element]
-   (.drag fireEvent element)
-   (r/flush))
+   (let [result (.drag fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.drag fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.drag fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag-end
   ([element]
-   (.dragEnd fireEvent element)
-   (r/flush))
+   (let [result (.dragEnd fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dragEnd fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dragEnd fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag-enter
   ([element]
-   (.dragEnter fireEvent element)
-   (r/flush))
+   (let [result (.dragEnter fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dragEnter fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dragEnter fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag-exit
   ([element]
-   (.dragExit fireEvent element)
-   (r/flush))
+   (let [result (.dragExit fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dragExit fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dragExit fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag-leave
   ([element]
-   (.dragLeave fireEvent element)
-   (r/flush))
+   (let [result (.dragLeave fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dragLeave fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dragLeave fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag-over
   ([element]
-   (.dragOver fireEvent element)
-   (r/flush))
+   (let [result (.dragOver fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dragOver fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dragOver fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drag-start
   ([element]
-   (.dragStart fireEvent element)
-   (r/flush))
+   (let [result (.dragStart fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.dragStart fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.dragStart fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn drop
   ([element]
-   (.drop fireEvent element)
-   (r/flush))
+   (let [result (.drop fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.drop fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.drop fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-down
   ([element]
-   (.mouseDown fireEvent element)
-   (r/flush))
+   (let [result (.mouseDown fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseDown fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseDown fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-enter
   ([element]
-   (.mouseEnter fireEvent element)
-   (r/flush))
+   (let [result (.mouseEnter fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseEnter fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseEnter fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-leave
   ([element]
-   (.mouseLeave fireEvent element)
-   (r/flush))
+   (let [result (.mouseLeave fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseLeave fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseLeave fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-move
   ([element]
-   (.mouseMove fireEvent element)
-   (r/flush))
+   (let [result (.mouseMove fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseMove fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseMove fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-out
   ([element]
-   (.mouseOut fireEvent element)
-   (r/flush))
+   (let [result (.mouseOut fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseOut fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseOut fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-over
   ([element]
-   (.mouseOver fireEvent element)
-   (r/flush))
+   (let [result (.mouseOver fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseOver fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseOver fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn mouse-up
   ([element]
-   (.mouseUp fireEvent element)
-   (r/flush))
+   (let [result (.mouseUp fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.mouseUp fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.mouseUp fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pop-state
   ([element]
-   (.popState fireEvent element)
-   (r/flush))
+   (let [result (.popState fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.popState fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.popState fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn select
   ([element]
-   (.select fireEvent element)
-   (r/flush))
+   (let [result (.select fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.select fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.select fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn touch-cancel
   ([element]
-   (.touchCancel fireEvent element)
-   (r/flush))
+   (let [result (.touchCancel fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.touchCancel fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.touchCancel fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn touch-end
   ([element]
-   (.touchEnd fireEvent element)
-   (r/flush))
+   (let [result (.touchEnd fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.touchEnd fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.touchEnd fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn touch-move
   ([element]
-   (.touchMove fireEvent element)
-   (r/flush))
+   (let [result (.touchMove fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.touchMove fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.touchMove fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn touch-start
   ([element]
-   (.touchStart fireEvent element)
-   (r/flush))
+   (let [result (.touchStart fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.touchStart fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.touchStart fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn scroll
   ([element]
-   (.scroll fireEvent element)
-   (r/flush))
+   (let [result (.scroll fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.scroll fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.scroll fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn wheel
   ([element]
-   (.wheel fireEvent element)
-   (r/flush))
+   (let [result (.wheel fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.wheel fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.wheel fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn abort
   ([element]
-   (.abort fireEvent element)
-   (r/flush))
+   (let [result (.abort fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.abort fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.abort fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn can-play
   ([element]
-   (.canPlay fireEvent element)
-   (r/flush))
+   (let [result (.canPlay fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.canPlay fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.canPlay fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn can-play-through
   ([element]
-   (.canPlayThrough fireEvent element)
-   (r/flush))
+   (let [result (.canPlayThrough fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.canPlayThrough fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.canPlayThrough fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn duration-change
   ([element]
-   (.durationChange fireEvent element)
-   (r/flush))
+   (let [result (.durationChange fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.durationChange fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.durationChange fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn emptied
   ([element]
-   (.emptied fireEvent element)
-   (r/flush))
+   (let [result (.emptied fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.emptied fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.emptied fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn encrypted
   ([element]
-   (.encrypted fireEvent element)
-   (r/flush))
+   (let [result (.encrypted fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.encrypted fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.encrypted fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn ended
   ([element]
-   (.ended fireEvent element)
-   (r/flush))
+   (let [result (.ended fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.ended fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.ended fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn loaded-data
   ([element]
-   (.loadedData fireEvent element)
-   (r/flush))
+   (let [result (.loadedData fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.loadedData fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.loadedData fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn loaded-metadata
   ([element]
-   (.loadedMetadata fireEvent element)
-   (r/flush))
+   (let [result (.loadedMetadata fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.loadedMetadata fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.loadedMetadata fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn load-start
   ([element]
-   (.loadStart fireEvent element)
-   (r/flush))
+   (let [result (.loadStart fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.loadStart fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.loadStart fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pause
   ([element]
-   (.pause fireEvent element)
-   (r/flush))
+   (let [result (.pause fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pause fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pause fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn play
   ([element]
-   (.play fireEvent element)
-   (r/flush))
+   (let [result (.play fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.play fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.play fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn playing
   ([element]
-   (.playing fireEvent element)
-   (r/flush))
+   (let [result (.playing fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.playing fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.playing fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn progress
   ([element]
-   (.progress fireEvent element)
-   (r/flush))
+   (let [result (.progress fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.progress fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.progress fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn rate-change
   ([element]
-   (.rateChange fireEvent element)
-   (r/flush))
+   (let [result (.rateChange fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.rateChange fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.rateChange fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn seeked
   ([element]
-   (.seeked fireEvent element)
-   (r/flush))
+   (let [result (.seeked fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.seeked fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.seeked fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn seeking
   ([element]
-   (.seeking fireEvent element)
-   (r/flush))
+   (let [result (.seeking fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.seeking fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.seeking fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn stalled
   ([element]
-   (.stalled fireEvent element)
-   (r/flush))
+   (let [result (.stalled fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.stalled fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.stalled fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn suspend
   ([element]
-   (.suspend fireEvent element)
-   (r/flush))
+   (let [result (.suspend fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.suspend fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.suspend fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn time-update
   ([element]
-   (.timeUpdate fireEvent element)
-   (r/flush))
+   (let [result (.timeUpdate fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.timeUpdate fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.timeUpdate fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn volume-change
   ([element]
-   (.volumeChange fireEvent element)
-   (r/flush))
+   (let [result (.volumeChange fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.volumeChange fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.volumeChange fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn waiting
   ([element]
-   (.waiting fireEvent element)
-   (r/flush))
+   (let [result (.waiting fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.waiting fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.waiting fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn load
   ([element]
-   (.load fireEvent element)
-   (r/flush))
+   (let [result (.load fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.load fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.load fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn error
   ([element]
-   (.error fireEvent element)
-   (r/flush))
+   (let [result (.error fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.error fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.error fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn animation-start
   ([element]
-   (.animationStart fireEvent element)
-   (r/flush))
+   (let [result (.animationStart fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.animationStart fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.animationStart fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn animation-end
   ([element]
-   (.animationEnd fireEvent element)
-   (r/flush))
+   (let [result (.animationEnd fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.animationEnd fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.animationEnd fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn animation-iteration
   ([element]
-   (.animationIteration fireEvent element)
-   (r/flush))
+   (let [result (.animationIteration fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.animationIteration fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.animationIteration fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn transition-end
   ([element]
-   (.transitionEnd fireEvent element)
-   (r/flush))
+   (let [result (.transitionEnd fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.transitionEnd fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.transitionEnd fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn double-click
   ([element]
-   (.doubleClick fireEvent element)
-   (r/flush))
+   (let [result (.doubleClick fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.doubleClick fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.doubleClick fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-over
   ([element]
-   (.pointerOver fireEvent element)
-   (r/flush))
+   (let [result (.pointerOver fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerOver fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerOver fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-enter
   ([element]
-   (.pointerEnter fireEvent element)
-   (r/flush))
+   (let [result (.pointerEnter fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerEnter fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerEnter fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-down
   ([element]
-   (.pointerDown fireEvent element)
-   (r/flush))
+   (let [result (.pointerDown fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerDown fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerDown fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-move
   ([element]
-   (.pointerMove fireEvent element)
-   (r/flush))
+   (let [result (.pointerMove fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerMove fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerMove fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-up
   ([element]
-   (.pointerUp fireEvent element)
-   (r/flush))
+   (let [result (.pointerUp fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerUp fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerUp fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-cancel
   ([element]
-   (.pointerCancel fireEvent element)
-   (r/flush))
+   (let [result (.pointerCancel fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerCancel fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerCancel fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-out
   ([element]
-   (.pointerOut fireEvent element)
-   (r/flush))
+   (let [result (.pointerOut fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerOut fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerOut fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn pointer-leave
   ([element]
-   (.pointerLeave fireEvent element)
-   (r/flush))
+   (let [result (.pointerLeave fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.pointerLeave fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.pointerLeave fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn got-pointer-capture
   ([element]
-   (.gotPointerCapture fireEvent element)
-   (r/flush))
+   (let [result (.gotPointerCapture fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.gotPointerCapture fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.gotPointerCapture fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 
 (defn lost-pointer-capture
   ([element]
-   (.lostPointerCapture fireEvent element)
-   (r/flush))
+   (let [result (.lostPointerCapture fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.lostPointerCapture fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.lostPointerCapture fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
 ;; End - Generated Code (Do not modify manually)

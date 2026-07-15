@@ -33,9 +33,25 @@
       (fire-event/change input-el {:target {:value "new value"}})
       (is (= "new value" (.-value input-el))))))
 
-(deftest key-down-test
-  (testing "key-down fires without error"
+(deftest key-down-returns-default-prevented-boolean
+  (testing "returns true when nothing calls preventDefault (single arity)"
     (rtl/cleanup)
-    (rtl/render (react/createElement "input" #js {:placeholder "keys"}))
-    (let [input-el (screen/get-by-placeholder-text "keys")]
-      (is (true? (fire-event/key-down input-el {:key "Enter"}))))))
+    (rtl/render (react/createElement "input" #js {:placeholder "plain"}))
+    (is (true? (fire-event/key-down (screen/get-by-placeholder-text "plain")))))
+
+  (testing "returns true when nothing calls preventDefault (options arity)"
+    (rtl/cleanup)
+    (rtl/render (react/createElement "input" #js {:placeholder "plain"}))
+    (is (true? (fire-event/key-down (screen/get-by-placeholder-text "plain") {:key " "}))))
+
+  (testing "returns false when a handler calls preventDefault (single arity)"
+    (rtl/cleanup)
+    (rtl/render (react/createElement "input" #js {:placeholder "prevents"
+                                                  :onKeyDown (fn [e] (.preventDefault e))}))
+    (is (false? (fire-event/key-down (screen/get-by-placeholder-text "prevents")))))
+
+  (testing "returns false when a handler calls preventDefault (options arity)"
+    (rtl/cleanup)
+    (rtl/render (react/createElement "input" #js {:placeholder "prevents"
+                                                  :onKeyDown (fn [e] (.preventDefault e))}))
+    (is (false? (fire-event/key-down (screen/get-by-placeholder-text "prevents") {:key " "})))))
