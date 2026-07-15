@@ -11,6 +11,7 @@
 
 (deftest get-by-role-test
   (testing "returns element within scope"
+    (rtl/cleanup)
     (render-el (react/createElement "div" #js {:role "region"}
                                     (react/createElement "button" nil "Inside")))
     (let [region (screen/get-by-role "region")
