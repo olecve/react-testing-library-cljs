@@ -16,6 +16,12 @@ For more information about the principles and concepts behind the testing librar
 
 - The `react-testing-library-cljs.within` namespace scopes queries to a specific element, useful when multiple similar elements exist in the DOM.
 
+- The `react-testing-library-cljs.user-event` namespace wraps [`@testing-library/user-event`](https://testing-library.com/docs/user-event/intro) to simulate realistic user interactions by firing the full sequence of events (focus, keyboard, pointer, input, etc.) rather than a single synthetic event. Requires the `@testing-library/user-event` npm package.
+
+- The `react-testing-library-cljs.mocks` namespace provides a helper to create mock event handlers that record the arguments they are called with.
+
+- The `react-testing-library-cljs.async` namespace provides the `deftest-async` macro for writing async tests that return a Promise. Requires `promesa` on the classpath.
+
 ### Reagent
 
 - The `react-testing-library-cljs.reagent.fire-event` similar to the `react-testing-library-cljs.fire-event`, but calling `reagent.core/flush` after every event to trigger re-render.
@@ -24,18 +30,18 @@ For more information about the principles and concepts behind the testing librar
 
 ## Installation
 
-Add the library to your project:
+Add the library to your project, using the latest version shown in the Clojars badge above:
 
 ### deps.edn
 
 ```clojure
-org.clojars.olecve/react-testing-library-cljs {:mvn/version "0.0.16"}
+org.clojars.olecve/react-testing-library-cljs {:mvn/version "0.0.20"}
 ```
 
 ### Leiningen
 
 ```clojure
-[org.clojars.olecve/react-testing-library-cljs "0.0.16"]
+[org.clojars.olecve/react-testing-library-cljs "0.0.20"]
 ```
 
 Install the npm dependency:
