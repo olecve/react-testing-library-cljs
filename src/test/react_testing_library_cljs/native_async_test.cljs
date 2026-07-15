@@ -1,7 +1,4 @@
 (ns react-testing-library-cljs.native-async-test
-  "Proves the toolchain runs ClojureScript native async tests: `^:async`
-  deftests whose body uses `await` to unwrap the library's Promise-returning
-  queries. Requires shadow-cljs >= 3.4.x (ClojureScript >= 1.12.145)."
   (:require
    ["@testing-library/react" :as rtl]
    ["react" :as react]
