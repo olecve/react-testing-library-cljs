@@ -112,7 +112,7 @@ npx shadow-cljs compile test && node --require global-jsdom/register out/test.js
             [react-testing-library-cljs.screen :as screen]))
 
 (deftest tracks-button-click
-  (let [[calls on-click] (mocks/create)]
+  (let [[on-click calls] (mocks/create)]
     (render/render! [:button {:on-click on-click} "Submit"])
     (fire-event/click (screen/get-by-text "Submit"))
     (is (= 1 (count @calls)))))
