@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.21
+
+- Fix `find-all-by-*` queries in `screen` and `within`: they wrapped the returned Promise in `vec` (throwing at call time) instead of resolving to a vector; they now resolve to a vector of matching elements
+
 ## 0.0.20
 
 - Return RTL `!event.defaultPrevented` boolean from reagent `fire-event/*` functions (previously returned `nil`)

@@ -11,6 +11,7 @@
 
 (def query-fn-template (slurp "query_fn.template.clj"))
 (def query-all-fn-template (slurp "query_all_fn.template.clj"))
+(def find-all-fn-template (slurp "find_all_fn.template.clj"))
 
 (let [query-types [{:type "getBy"
                     :docstring (str "Returns the matching element for a query.\n\n  "
@@ -64,7 +65,7 @@
                                     "- One match: Resolves with vector\n  "
                                     "- Multiple match: Resolves with vector\n  "
                                     "- Async: Yes")
-                    :template query-all-fn-template}]
+                    :template find-all-fn-template}]
       query-values [{:by "Role"
                      :url "https://testing-library.com/docs/queries/byrole"}
                     {:by "LabelText"
