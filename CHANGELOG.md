@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.20
+
+- Return RTL `!event.defaultPrevented` boolean from reagent `fire-event/*` functions (previously returned `nil`)
+
 ## 0.0.19
 
 - **Breaking:** Swap return order of `mocks/create` to `[handler calls reset!]`
