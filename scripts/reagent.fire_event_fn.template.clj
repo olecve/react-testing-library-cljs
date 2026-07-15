@@ -1,7 +1,9 @@
 (defn $cljs-fn-name
   ([element]
-   (.$js-event-type fireEvent element)
-   (r/flush))
+   (let [result (.$js-event-type fireEvent element)]
+     (r/flush)
+     result))
   ([element options]
-   (.$js-event-type fireEvent element (clj->js options))
-   (r/flush)))
+   (let [result (.$js-event-type fireEvent element (clj->js options))]
+     (r/flush)
+     result)))
