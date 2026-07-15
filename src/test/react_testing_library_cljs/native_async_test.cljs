@@ -1,4 +1,6 @@
 (ns react-testing-library-cljs.native-async-test
+  "Native ClojureScript async tests (`^:async` / `await`).
+  Requires shadow-cljs >= 3.4.x (ClojureScript >= 1.12.145)."
   (:require
    ["@testing-library/react" :as rtl]
    ["react" :as react]
