@@ -1,1 +1,2 @@
-{:lint-as {react-testing-library-cljs.async/deftest-async clojure.test/deftest}}
+{:lint-as {react-testing-library-cljs.async/deftest-async clojure.test/deftest
+           promesa.core/let clojure.core/let}}

@@ -689,9 +689,9 @@
 
   See [findAllByRole](https://testing-library.com/docs/queries/byrole)."
   ([element matcher]
-   (vec (.findAllByRole (within element) matcher)))
+   (.then (.findAllByRole (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByRole (within element) matcher (clj->js options)))))
+   (.then (.findAllByRole (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-label-text
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -706,9 +706,9 @@
 
   See [findAllByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([element matcher]
-   (vec (.findAllByLabelText (within element) matcher)))
+   (.then (.findAllByLabelText (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByLabelText (within element) matcher (clj->js options)))))
+   (.then (.findAllByLabelText (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-placeholder-text
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -723,9 +723,9 @@
 
   See [findAllByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([element matcher]
-   (vec (.findAllByPlaceholderText (within element) matcher)))
+   (.then (.findAllByPlaceholderText (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByPlaceholderText (within element) matcher (clj->js options)))))
+   (.then (.findAllByPlaceholderText (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-text
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -740,9 +740,9 @@
 
   See [findAllByText](https://testing-library.com/docs/queries/bytext)."
   ([element matcher]
-   (vec (.findAllByText (within element) matcher)))
+   (.then (.findAllByText (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByText (within element) matcher (clj->js options)))))
+   (.then (.findAllByText (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-display-value
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -757,9 +757,9 @@
 
   See [findAllByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([element matcher]
-   (vec (.findAllByDisplayValue (within element) matcher)))
+   (.then (.findAllByDisplayValue (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByDisplayValue (within element) matcher (clj->js options)))))
+   (.then (.findAllByDisplayValue (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-alt-text
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -774,9 +774,9 @@
 
   See [findAllByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([element matcher]
-   (vec (.findAllByAltText (within element) matcher)))
+   (.then (.findAllByAltText (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByAltText (within element) matcher (clj->js options)))))
+   (.then (.findAllByAltText (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-title
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -791,9 +791,9 @@
 
   See [findAllByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([element matcher]
-   (vec (.findAllByTitle (within element) matcher)))
+   (.then (.findAllByTitle (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByTitle (within element) matcher (clj->js options)))))
+   (.then (.findAllByTitle (within element) matcher (clj->js options)) vec)))
 
 (defn find-all-by-test-id
   "Returns a promise which resolves to a vector of matching elements scoped to `element`.
@@ -808,7 +808,7 @@
 
   See [findAllByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([element matcher]
-   (vec (.findAllByTestId (within element) matcher)))
+   (.then (.findAllByTestId (within element) matcher) vec))
   ([element matcher options]
-   (vec (.findAllByTestId (within element) matcher (clj->js options)))))
+   (.then (.findAllByTestId (within element) matcher (clj->js options)) vec)))
 ;; End - Generated Code (Do not modify manually)

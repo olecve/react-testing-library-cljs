@@ -693,9 +693,9 @@
 
   See [findAllByRole](https://testing-library.com/docs/queries/byrole)."
   ([matcher]
-   (vec (.findAllByRole screen matcher)))
+   (.then (.findAllByRole screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByRole screen matcher (clj->js options)))))
+   (.then (.findAllByRole screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-label-text
   "Returns a promise which resolves to a vector of matching elements.
@@ -710,9 +710,9 @@
 
   See [findAllByLabelText](https://testing-library.com/docs/queries/bylabeltext)."
   ([matcher]
-   (vec (.findAllByLabelText screen matcher)))
+   (.then (.findAllByLabelText screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByLabelText screen matcher (clj->js options)))))
+   (.then (.findAllByLabelText screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-placeholder-text
   "Returns a promise which resolves to a vector of matching elements.
@@ -727,9 +727,9 @@
 
   See [findAllByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext)."
   ([matcher]
-   (vec (.findAllByPlaceholderText screen matcher)))
+   (.then (.findAllByPlaceholderText screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByPlaceholderText screen matcher (clj->js options)))))
+   (.then (.findAllByPlaceholderText screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-text
   "Returns a promise which resolves to a vector of matching elements.
@@ -744,9 +744,9 @@
 
   See [findAllByText](https://testing-library.com/docs/queries/bytext)."
   ([matcher]
-   (vec (.findAllByText screen matcher)))
+   (.then (.findAllByText screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByText screen matcher (clj->js options)))))
+   (.then (.findAllByText screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-display-value
   "Returns a promise which resolves to a vector of matching elements.
@@ -761,9 +761,9 @@
 
   See [findAllByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue)."
   ([matcher]
-   (vec (.findAllByDisplayValue screen matcher)))
+   (.then (.findAllByDisplayValue screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByDisplayValue screen matcher (clj->js options)))))
+   (.then (.findAllByDisplayValue screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-alt-text
   "Returns a promise which resolves to a vector of matching elements.
@@ -778,9 +778,9 @@
 
   See [findAllByAltText](https://testing-library.com/docs/queries/byalttext)."
   ([matcher]
-   (vec (.findAllByAltText screen matcher)))
+   (.then (.findAllByAltText screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByAltText screen matcher (clj->js options)))))
+   (.then (.findAllByAltText screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-title
   "Returns a promise which resolves to a vector of matching elements.
@@ -795,9 +795,9 @@
 
   See [findAllByTitle](https://testing-library.com/docs/queries/bytitle)."
   ([matcher]
-   (vec (.findAllByTitle screen matcher)))
+   (.then (.findAllByTitle screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByTitle screen matcher (clj->js options)))))
+   (.then (.findAllByTitle screen matcher (clj->js options)) vec)))
 
 (defn find-all-by-test-id
   "Returns a promise which resolves to a vector of matching elements.
@@ -812,7 +812,7 @@
 
   See [findAllByTestId](https://testing-library.com/docs/queries/bytestid)."
   ([matcher]
-   (vec (.findAllByTestId screen matcher)))
+   (.then (.findAllByTestId screen matcher) vec))
   ([matcher options]
-   (vec (.findAllByTestId screen matcher (clj->js options)))))
+   (.then (.findAllByTestId screen matcher (clj->js options)) vec)))
 ;; End - Generated Code (Do not modify manually)
