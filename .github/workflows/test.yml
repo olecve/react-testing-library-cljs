@@ -34,3 +34,28 @@ jobs:
       - run: npm run lint
       - run: npm run patrol
       - run: npm test
+
+  example:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/reagent-karma-example
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: examples/reagent-karma-example/package-lock.json
+
+      - run: npm ci
+      - run: npm run fmt:check
+      - run: npm run lint
+      - run: npx shadow-cljs compile app
+      - run: npm test

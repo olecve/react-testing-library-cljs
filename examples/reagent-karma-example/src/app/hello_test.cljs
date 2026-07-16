@@ -3,7 +3,7 @@
    [app.hello :refer [click-counter click-counter-with-inner-state hello]]
    [cljs.test :refer-macros [deftest is]]
    [react-testing-library-cljs.reagent.fire-event :as fire-event]
-   [react-testing-library-cljs.reagent.render :refer [render!]]
+   [react-testing-library-cljs.reagent.render :refer [act render!]]
    [react-testing-library-cljs.screen :as s]
    [reagent.core :as r]))
 
@@ -13,16 +13,16 @@
       "renders hello"))
 
 (deftest when-clicking-counter
-  (let [atom (r/atom 0)]
-    (render! [click-counter atom])
+  (let [click-count (r/atom 0)]
+    (render! [click-counter click-count])
     (is (s/query-by-text #"has value: 0")
         "shows the initial value as '0'")
 
-    (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+    (act #(fire-event/click (s/query-by-role "button" {:name #"(?i)click me"})))
     (is (s/query-by-text #"has value: 1")
         "shows the value as '1' after click")
 
-    (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+    (act #(fire-event/click (s/query-by-role "button" {:name #"(?i)click me"})))
     (is (s/query-by-text #"has value: 2")
         "shows the value as '2' after two clicks")))
 
@@ -32,10 +32,10 @@
   (is (s/query-by-text #"has value: 0")
       "shows the initial value as '0'")
 
-  (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+  (act #(fire-event/click (s/query-by-role "button" {:name #"(?i)click me"})))
   (is (s/query-by-text #"has value: 1")
       "shows the value as '1' after click")
 
-  (fire-event/click (s/query-by-role "button" #"(?i)click me"))
+  (act #(fire-event/click (s/query-by-role "button" {:name #"(?i)click me"})))
   (is (s/query-by-text #"has value: 2")
       "shows the value as '2' after two clicks"))
