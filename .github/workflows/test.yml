@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        example: [reagent-karma-example, node-test-example]
+        example: [reagent-karma-example, node-test-example, re-frame-example]
     defaults:
       run:
         working-directory: examples/${{ matrix.example }}
