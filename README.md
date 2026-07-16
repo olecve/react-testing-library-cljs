@@ -20,7 +20,7 @@ For more information about the principles and concepts behind the testing librar
 
 - The `react-testing-library-cljs.mocks` namespace provides a helper to create mock event handlers that record the arguments they are called with.
 
-- The `react-testing-library-cljs.async` namespace provides the `deftest-async` macro for writing async tests that return a Promise. Requires `promesa` on the classpath.
+- The `react-testing-library-cljs.async` namespace provides the `deftest-async` macro for writing async tests on toolchains without native ClojureScript async (shadow-cljs before 3.4). Requires `promesa` on the classpath. On shadow-cljs 3.4+ prefer a native `^:async` deftest with `await`.
 
 ### Reagent
 
@@ -153,23 +153,38 @@ In the example below, scoping to the dialog avoids ambiguity with other "Delete"
     (is (some? (within/get-by-role dialog "button" {:name "Cancel"})))))
 ```
 
-### Async queries
+### Async tests
 
-`find-by-*` queries return a promise that resolves when a matching element appears (useful for async updates):
+`find-by-*` queries (and all `user-event` calls) return a Promise that resolves when the interaction settles, so tests that use them must await it. Pick the style that matches your toolchain.
+
+**Native async** — recommended, requires shadow-cljs 3.4+ (ClojureScript 1.12.145+). Mark the test `^:async` and `await` the Promise directly:
 
 ```clojure
 (ns my-app.async-test
-  (:require [cljs.test :refer [deftest async is]]
+  (:require [cljs.test :refer [deftest is]]
             [react-testing-library-cljs.reagent.render :as render]
             [react-testing-library-cljs.screen :as screen]))
 
-(deftest finds-async-element
-  (async done
-    (render/render! [my-async-component])
-    (-> (screen/find-by-text "Loaded!")
-        (.then (fn [element]
-                 (is (some? element))
-                 (done))))))
+(deftest ^:async finds-async-element
+  (render/render! [my-async-component])
+  (let [element (await (screen/find-by-text "Loaded!"))]
+    (is (some? element))))
+```
+
+**`deftest-async` macro** — the compatibility path for older toolchains that lack native async. It awaits each top-level form and requires `promesa` on the classpath:
+
+```clojure
+(ns my-app.async-test
+  (:require [cljs.test :refer [is]]
+            [promesa.core :as p]
+            [react-testing-library-cljs.async :refer-macros [deftest-async]]
+            [react-testing-library-cljs.reagent.render :as render]
+            [react-testing-library-cljs.screen :as screen]))
+
+(deftest-async finds-async-element
+  (render/render! [my-async-component])
+  (p/let [element (screen/find-by-text "Loaded!")]
+    (is (some? element))))
 ```
 
 ## Release
