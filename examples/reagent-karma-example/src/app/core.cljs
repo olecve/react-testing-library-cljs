@@ -1,13 +1,16 @@
 (ns app.core
-  "This namespace contains your application and is the entrypoint for 'yarn start'."
+  "This namespace contains your application and is the entrypoint for 'npm start'."
   (:require
    [app.hello :refer [hello]]
-   [reagent.core :as r]))
+   [reagent.dom.client :as rdom-client]))
+
+(defonce root
+  (delay (rdom-client/create-root (.getElementById js/document "app"))))
 
 (defn ^:dev/after-load render
   "Render the toplevel component for this app."
   []
-  (r/render [hello] (.getElementById js/document "app")))
+  (rdom-client/render @root [hello]))
 
 (defn ^:export main
   "Run application startup logic."
