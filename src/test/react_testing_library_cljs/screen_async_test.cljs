@@ -1,6 +1,6 @@
 (ns react-testing-library-cljs.screen-async-test
-  "Native ClojureScript async tests (`^:async` / `await`) for `screen`.
-  Requires shadow-cljs >= 3.4.x (ClojureScript >= 1.12.145)."
+  "Exercises `screen`'s async queries with native async (`^:async` / `await`).
+  Requires shadow-cljs 3.4+ (ClojureScript 1.12.145+)."
   (:require
    ["@testing-library/react" :as rtl]
    ["react" :as react]

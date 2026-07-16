@@ -1,7 +1,6 @@
-(ns react-testing-library-cljs.async-macro-test
-  "Smoke test guarding the `deftest-async` macro, the compatibility path for
-  toolchains that cannot run native `^:async` tests (shadow-cljs < 3.4.x).
-  Requires `promesa` on the classpath."
+(ns react-testing-library-cljs.deftest-async-macro-test
+  "Smoke-tests the `deftest-async` macro, the pre-3.4 compatibility path.
+  Requires `promesa`; native `^:async` tests need shadow-cljs 3.4+ instead."
   (:require
    ["@testing-library/react" :as rtl]
    ["react" :as react]

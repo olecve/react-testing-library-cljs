@@ -1,7 +1,6 @@
 (ns react-testing-library-cljs.user-event-promesa-test
-  "user-event async tests using the `deftest-async` macro + promesa, the
-  compatibility path for toolchains without native `^:async` support
-  (shadow-cljs < 3.4.x). The native equivalents live in
+  "Exercises user-event interactions with the `deftest-async` macro + `promesa`.
+  This is the pre-3.4 compatibility path; the native equivalents live in
   `user-event-async-test`."
   (:require
    ["@testing-library/react" :as rtl]
