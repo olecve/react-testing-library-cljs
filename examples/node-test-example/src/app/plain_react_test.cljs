@@ -2,9 +2,9 @@
   "Testing plain React (no Reagent): raw createElement with user-event and
   async queries. Uses native ClojureScript async (`^:async` / `await`)."
   (:require
-   ["@testing-library/react" :as rtl]
    ["react" :as react]
    [cljs.test :refer [deftest is]]
+   [react-testing-library-cljs.render :as rtl]
    [react-testing-library-cljs.screen :as screen]
    [react-testing-library-cljs.user-event :as user-event]))
 

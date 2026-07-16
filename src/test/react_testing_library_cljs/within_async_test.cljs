@@ -2,9 +2,9 @@
   "Exercises `within`'s async queries with native async (`^:async` / `await`).
   Requires shadow-cljs 3.4+ (ClojureScript 1.12.145+)."
   (:require
-   ["@testing-library/react" :as rtl]
    ["react" :as react]
    [cljs.test :refer [deftest is]]
+   [react-testing-library-cljs.render :as rtl]
    [react-testing-library-cljs.screen :as screen]
    [react-testing-library-cljs.within :as within]))
 

@@ -2,11 +2,11 @@
   "Smoke-tests the `deftest-async` macro, the pre-3.4 compatibility path.
   Requires `promesa`; native `^:async` tests need shadow-cljs 3.4+ instead."
   (:require
-   ["@testing-library/react" :as rtl]
    ["react" :as react]
    [cljs.test :refer [is]]
    [promesa.core :as p]
    [react-testing-library-cljs.async :refer-macros [deftest-async]]
+   [react-testing-library-cljs.render :as rtl]
    [react-testing-library-cljs.screen :as screen]))
 
 (defn- render-el [element]
