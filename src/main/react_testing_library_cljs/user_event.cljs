@@ -51,8 +51,8 @@
   ([^js user element] (.unhover user element))
   ([^js user element options] (.unhover user element (clj->js options))))
 (defn type
-  "Types text into an element character by character, simulating the full
-  keyboard event sequence for each character.
+  "Types text into an element one character at a time.
+  Simulates the full keyboard event sequence for each character.
 
   See [type](https://testing-library.com/docs/user-event/utility/#type)."
   ([^js user element text] (.type user element text))
@@ -90,8 +90,8 @@
   ([^js user] (.tab user))
   ([^js user options] (.tab user (clj->js options))))
 (defn keyboard
-  "Simulates keyboard events for the given key descriptor string,
-  e.g. {Enter}, a, {{a}}.
+  "Simulates keyboard events for the given key descriptor string.
+  For example `{Enter}`, `a`, or `{{a}}`.
 
   See [keyboard](https://testing-library.com/docs/user-event/keyboard)."
   ([^js user text] (.keyboard user text))
