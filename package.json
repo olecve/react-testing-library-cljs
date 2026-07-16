@@ -8,7 +8,7 @@
     "test": "npx shadow-cljs compile test && node out/test.js",
     "test:watch": "npx shadow-cljs watch test --config-merge \"{:autorun true}\"",
     "lint": "clj-kondo --lint src",
-    "patrol": "[ -f cljs-patrol.jar ] || curl -sL https://github.com/olecve/cljs-patrol/releases/download/v0.0.17/cljs-patrol-0.0.17.jar -o cljs-patrol.jar; java -jar cljs-patrol.jar --only docstrings --fail-on all src/main",
+    "patrol": "clojure -M:patrol",
     "fmt": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
     "fmt:check": "prettier --check \"**/*.{clj,cljs,cljc,edn}\""
   },

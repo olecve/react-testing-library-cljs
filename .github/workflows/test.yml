@@ -25,6 +25,10 @@ jobs:
         with:
           version: "2026.05.25"
 
+      - uses: DeLaGuardo/setup-clojure@master
+        with:
+          cli: latest
+
       - run: npm ci
       - run: npm run fmt:check
       - run: npm run lint

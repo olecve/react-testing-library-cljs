@@ -34,6 +34,7 @@
 /checkouts
 /dev-resources/public/js/*
 /out
+/.cpcache
 /.clj-kondo/.cache
 /.clj-kondo/imports
 /.lsp
@@ -50,4 +51,3 @@ pom.xml
 .repl
 node_modules
 pom.xml.asc
-/cljs-patrol.jar
