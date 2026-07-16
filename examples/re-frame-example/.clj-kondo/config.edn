@@ -1,0 +1,4 @@
+;; `await` is the native ClojureScript async operator (cljs >= 1.12.145).
+;; The clj-kondo release on npm does not recognize it yet, so silence the
+;; unresolved-symbol warning for it here.
+{:linters {:unresolved-symbol {:exclude [await]}}}

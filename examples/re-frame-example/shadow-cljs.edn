@@ -1,0 +1,12 @@
+{:builds
+ {:test {:target :node-test
+         :ns-regexp "-test$"
+         :output-to "out/test.js"
+         :devtools {:preloads [app.test-setup]}}}
+ :dependencies [[reagent "2.0.1"]
+                [re-frame "1.4.7"]]
+ ;; Reference the library's source in this repo directly (instead of the
+ ;; published Clojars dependency) so the example always tracks HEAD and needs
+ ;; no release. A standalone project would add the Clojars dependency instead
+ ;; (see the repository root README).
+ :source-paths ["src" "../../src/main"]}

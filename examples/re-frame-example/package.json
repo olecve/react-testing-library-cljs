@@ -1,0 +1,26 @@
+{
+  "name": "re-frame-example",
+  "private": true,
+  "scripts": {
+    "ci": "run-s fmt:check lint test",
+    "fmt": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
+    "fmt:check": "prettier --check \"**/*.{clj,cljs,cljc,edn}\"",
+    "lint": "clj-kondo --lint src",
+    "test": "shadow-cljs compile test && node out/test.js",
+    "test:watch": "shadow-cljs watch test --config-merge \"{:autorun true}\""
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "16.3.2",
+    "clj-kondo": "2025.10.23",
+    "global-jsdom": "^28.0.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "^3.8.4",
+    "prettier-plugin-cljfmt": "^0.1.1",
+    "shadow-cljs": "3.4.11"
+  }
+}
