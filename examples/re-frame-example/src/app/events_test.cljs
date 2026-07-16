@@ -3,14 +3,14 @@
   (:require
    [app.events :as events]
    [app.subs :as subs]
-   [cljs.test :refer [deftest is testing]]))
+   [cljs.test :refer [deftest is]]))
 
 (deftest event-handlers
-  (testing "initialize sets the starting count"
-    (is (= {:count 0} (events/initialize nil nil))))
-  (testing "increment bumps the count"
-    (is (= {:count 1} (events/increment {:count 0} nil)))))
+  (is (= {:count 0} (events/initialize nil nil))
+      "initialize sets the starting count")
+  (is (= {:count 1} (events/increment {:count 0} nil))
+      "increment bumps the count"))
 
 (deftest subscription-handlers
-  (testing "count-value reads :count from the db"
-    (is (= 5 (subs/count-value {:count 5} nil)))))
+  (is (= 5 (subs/count-value {:count 5} nil))
+      "count-value reads :count from the db"))
