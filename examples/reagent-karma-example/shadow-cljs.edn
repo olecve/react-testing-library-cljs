@@ -7,9 +7,6 @@
          :output-to "out/test.js"
          :target :node-test
          :devtools {:preloads [app.test-setup]}}
-  :e2e {:ns-regexp "e2e.*"
-        :output-to "out/e2e.js"
-        :target :node-test}
   :karma {:target :karma
           :ns-regexp "^app.*-test$"
           :output-to "target/karma-test.js"}}
