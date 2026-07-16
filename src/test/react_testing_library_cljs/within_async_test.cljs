@@ -1,4 +1,4 @@
-(ns react-testing-library-cljs.within-native-async-test
+(ns react-testing-library-cljs.within-async-test
   "Native ClojureScript async tests (`^:async` / `await`) for `within`.
   Requires shadow-cljs >= 3.4.x (ClojureScript >= 1.12.145)."
   (:require
