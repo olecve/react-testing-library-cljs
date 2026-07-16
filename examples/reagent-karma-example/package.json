@@ -6,7 +6,6 @@
     "build": "npm run clean && shadow-cljs release app",
     "ci": "npm run fmt:check && npm run lint && shadow-cljs compile app && npm test && npm run test:karma",
     "clean": "rimraf public/js",
-    "e2e": "shadow-cljs compile e2e && node out/e2e.js",
     "fmt:clj": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
     "fmt:check": "prettier --check \"**/*.{clj,cljs,cljc,edn}\"",
     "fmt:sort-package-json": "sort-package-json package.json",
@@ -48,9 +47,6 @@
     "prettier": "^3.8.4",
     "prettier-plugin-cljfmt": "^0.1.1",
     "rimraf": "~3.0.2",
-    "serve-handler": "~6.1.3",
-    "shadow-cljs": "3.4.11",
-    "taiko": "~1.0.12",
-    "taiko-diagnostics": "~0.4.0"
+    "shadow-cljs": "3.4.11"
   }
 }
