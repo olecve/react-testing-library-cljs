@@ -1,9 +1,13 @@
 (ns react-testing-library-cljs.async)
 
 (defmacro deftest-async
-  "Like `cljs.test/deftest` but for async tests that return a Promise.
+  "Defines a `cljs.test/deftest` for an async test whose body returns a Promise.
   Wraps the body in `promesa.core/do`, so each top-level form is awaited
-  before the next runs. Automatically calls `done` when the Promise resolves.
+  before the next runs, then calls `done` when the Promise resolves.
+
+  This is the compatibility path for toolchains without native ClojureScript
+  async functions. On shadow-cljs 3.4+ (ClojureScript 1.12.145+) prefer a
+  native `^:async` deftest with `await` instead.
 
   Requires `promesa` on the classpath.
 
