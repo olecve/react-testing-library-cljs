@@ -8,6 +8,7 @@
     "test": "npx shadow-cljs compile test && node out/test.js",
     "test:watch": "npx shadow-cljs watch test --config-merge \"{:autorun true}\"",
     "lint": "clj-kondo --lint src",
+    "patrol": "clojure -M:patrol",
     "fmt": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
     "fmt:check": "prettier --check \"**/*.{clj,cljs,cljc,edn}\""
   },

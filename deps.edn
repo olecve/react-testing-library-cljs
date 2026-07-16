@@ -1,0 +1,8 @@
+{:aliases
+ {:patrol
+  {:deps {io.github.olecve/cljs-patrol
+          {:git/tag "v0.0.17"
+           :git/sha "1616b8d0daec1ffa7d8cec6f9ce08348d837202a"}}
+   :main-opts ["-m" "cljs-patrol.core"
+               "--fail-on" "all"
+               "src/main"]}}}
