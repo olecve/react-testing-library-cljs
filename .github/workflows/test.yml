@@ -37,9 +37,12 @@ jobs:
 
   example:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        example: [reagent-karma-example, node-test-example]
     defaults:
       run:
-        working-directory: examples/reagent-karma-example
+        working-directory: examples/${{ matrix.example }}
     steps:
       - uses: actions/checkout@v4
 
@@ -52,10 +55,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: examples/reagent-karma-example/package-lock.json
+          cache-dependency-path: examples/${{ matrix.example }}/package-lock.json
 
       - run: npm ci
-      - run: npm run fmt:check
-      - run: npm run lint
-      - run: npx shadow-cljs compile app
-      - run: npm test
+      - run: npm run ci

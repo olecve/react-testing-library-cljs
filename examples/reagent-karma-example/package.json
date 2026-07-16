@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run clean && shadow-cljs release app",
+    "ci": "npm run fmt:check && npm run lint && shadow-cljs compile app && npm test",
     "clean": "rimraf public/js",
     "e2e": "shadow-cljs compile e2e && node out/e2e.js",
     "fmt:clj": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
