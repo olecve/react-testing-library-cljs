@@ -12,6 +12,8 @@ For more information about the principles and concepts behind the testing librar
 
 - The `react-testing-library-cljs.screen` namespace provides a wrapper around the `react-testing-library`'s `screen` object, making it easier to interact with rendered components.
 
+- The `react-testing-library-cljs.render` namespace wraps `render`, `cleanup`, and `act` from `@testing-library/react` so plain-React (non-Reagent) tests don't import the JS module directly. Reagent users should use `react-testing-library-cljs.reagent.render` instead.
+
 - The `react-testing-library-cljs.fire-event` namespace simplifies firing events on rendered components, allowing you to simulate user interactions.
 
 - The `react-testing-library-cljs.within` namespace scopes queries to a specific element, useful when multiple similar elements exist in the DOM.

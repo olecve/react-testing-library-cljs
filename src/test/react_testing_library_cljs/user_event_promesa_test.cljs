@@ -3,11 +3,11 @@
   This is the pre-3.4 compatibility path; the native equivalents live in
   `user-event-async-test`."
   (:require
-   ["@testing-library/react" :as rtl]
    ["react" :as react]
    [cljs.test :refer [is]]
    [promesa.core :as p]
    [react-testing-library-cljs.async :refer-macros [deftest-async]]
+   [react-testing-library-cljs.render :as rtl]
    [react-testing-library-cljs.screen :as screen]
    [react-testing-library-cljs.user-event :as user-event]))
 

@@ -1,8 +1,8 @@
 (ns react-testing-library-cljs.screen-test
   (:require
-   ["@testing-library/react" :as rtl]
    ["react" :as react]
    [cljs.test :refer [deftest is testing]]
+   [react-testing-library-cljs.render :as rtl]
    [react-testing-library-cljs.screen :as screen]))
 
 (defn- render-el [element]
