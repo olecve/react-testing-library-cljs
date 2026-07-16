@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run clean && shadow-cljs release app",
-    "ci": "npm run fmt:check && npm run lint && shadow-cljs compile app && npm test",
+    "ci": "npm run fmt:check && npm run lint && shadow-cljs compile app && npm test && npm run test:karma",
     "clean": "rimraf public/js",
     "e2e": "shadow-cljs compile e2e && node out/e2e.js",
     "fmt:clj": "prettier --write \"**/*.{clj,cljs,cljc,edn}\"",
@@ -16,6 +16,7 @@
     "sc": "shadow-cljs",
     "server": "shadow-cljs stop && shadow-cljs start",
     "start": "shadow-cljs watch app",
+    "test:karma": "shadow-cljs compile karma && karma start --single-run --reporters dots",
     "test:karma:compile": "shadow-cljs watch karma --config-merge \"{:autorun true}\"",
     "test:karma:run": "karma start --reporters junit,dots",
     "test:karma:watch": "concurrently --prefix none \"npm run test:karma:run\" \"npm run test:karma:compile\"",
