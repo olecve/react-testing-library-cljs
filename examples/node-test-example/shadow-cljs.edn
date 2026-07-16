@@ -1,0 +1,8 @@
+{:builds
+ {:test {:target :node-test
+         :ns-regexp "-test$"
+         :output-to "out/test.js"
+         :devtools {:preloads [app.test-setup]}}}
+ :dependencies [[reagent "2.0.1"]
+                [org.clojars.olecve/react-testing-library-cljs "0.0.20"]]
+ :source-paths ["src"]}
